@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri Jan 29 11:23:49 2021
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : 4bit_ripple_carry_adder
+Top-level Entity Name : DUT
+Family : MAX V
+Device : 5M1270ZT144C5
+Timing Models : Final
+Total logic elements : 8 / 1,270 ( < 1 % )
+Total pins : 14 / 114 ( 12 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

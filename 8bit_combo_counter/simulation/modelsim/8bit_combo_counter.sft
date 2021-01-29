@@ -1,0 +1,4 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+    {{"Slow Model"} {8bit_combo_counter.vho 8bit_combo_counter_vhd.sdo}}
+}

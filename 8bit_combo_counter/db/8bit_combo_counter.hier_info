@@ -1,0 +1,201 @@
+|DUT
+input_vector[0] => combo_8_counter:add_instance.x0
+input_vector[1] => combo_8_counter:add_instance.x1
+input_vector[2] => combo_8_counter:add_instance.x2
+input_vector[3] => combo_8_counter:add_instance.x3
+input_vector[4] => combo_8_counter:add_instance.x4
+input_vector[5] => combo_8_counter:add_instance.x5
+input_vector[6] => combo_8_counter:add_instance.x6
+input_vector[7] => combo_8_counter:add_instance.x7
+output_vector[0] << combo_8_counter:add_instance.y0
+output_vector[1] << combo_8_counter:add_instance.y1
+output_vector[2] << combo_8_counter:add_instance.y2
+output_vector[3] << combo_8_counter:add_instance.y3
+
+
+|DUT|combo_8_counter:add_instance
+x0 => Full_Adder:F1.A
+x1 => Full_Adder:F1.B
+x2 => Full_Adder:F1.Cin
+x3 => Full_Adder:F2.A
+x4 => Full_Adder:F2.B
+x5 => Full_Adder:F2.Cin
+x6 => Full_Adder:F4.Cin
+x7 => HALF_ADDER:H1.A
+y0 <= HALF_ADDER:H1.S
+y1 <= HALF_ADDER:H2.S
+y2 <= HALF_ADDER:H3.S
+y3 <= HALF_ADDER:H3.C
+
+
+|DUT|combo_8_counter:add_instance|HALF_ADDER:H1
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|HALF_ADDER:H2
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|HALF_ADDER:H3
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F4
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F4|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F4|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F4|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|combo_8_counter:add_instance|Full_Adder:F4|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

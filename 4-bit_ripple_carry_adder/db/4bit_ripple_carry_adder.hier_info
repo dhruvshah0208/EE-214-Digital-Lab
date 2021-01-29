@@ -1,0 +1,178 @@
+|DUT
+input_vector[0] => ripple_carry_adder:add_instance.input_carry
+input_vector[1] => ripple_carry_adder:add_instance.input_2[0]
+input_vector[2] => ripple_carry_adder:add_instance.input_2[1]
+input_vector[3] => ripple_carry_adder:add_instance.input_2[2]
+input_vector[4] => ripple_carry_adder:add_instance.input_2[3]
+input_vector[5] => ripple_carry_adder:add_instance.input_1[0]
+input_vector[6] => ripple_carry_adder:add_instance.input_1[1]
+input_vector[7] => ripple_carry_adder:add_instance.input_1[2]
+input_vector[8] => ripple_carry_adder:add_instance.input_1[3]
+output_vector[0] <= ripple_carry_adder:add_instance.output_sum[0]
+output_vector[1] <= ripple_carry_adder:add_instance.output_sum[1]
+output_vector[2] <= ripple_carry_adder:add_instance.output_sum[2]
+output_vector[3] <= ripple_carry_adder:add_instance.output_sum[3]
+output_vector[4] <= ripple_carry_adder:add_instance.output_carry
+
+
+|DUT|ripple_carry_adder:add_instance
+input_1[0] => Full_Adder:G_1:0:FA.A
+input_1[1] => Full_Adder:G_1:1:FA.A
+input_1[2] => Full_Adder:G_1:2:FA.A
+input_1[3] => Full_Adder:G_1:3:FA.A
+input_2[0] => Full_Adder:G_1:0:FA.B
+input_2[1] => Full_Adder:G_1:1:FA.B
+input_2[2] => Full_Adder:G_1:2:FA.B
+input_2[3] => Full_Adder:G_1:3:FA.B
+input_carry => Full_Adder:G_1:0:FA.Cin
+output_sum[0] <= Full_Adder:G_1:0:FA.S
+output_sum[1] <= Full_Adder:G_1:1:FA.S
+output_sum[2] <= Full_Adder:G_1:2:FA.S
+output_sum[3] <= Full_Adder:G_1:3:FA.S
+output_carry <= Full_Adder:G_1:3:FA.Cout
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:0:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:0:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:0:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:0:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:0:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:1:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:1:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:1:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:1:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:1:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:2:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:2:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:2:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:2:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:2:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:3:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:3:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:3:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:3:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ripple_carry_adder:add_instance|Full_Adder:\G_1:3:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
