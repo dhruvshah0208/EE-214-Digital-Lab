@@ -1,6 +1,6 @@
- -- Copyright (C) 2020  Intel Corporation. All rights reserved.
+ -- Copyright (C) 2018  Intel Corporation. All rights reserved.
  -- Your use of Intel Corporation's design tools, logic functions 
- -- and other software and tools, and any partner logic 
+ -- and other software and tools, and its AMPP partner logic 
  -- functions, and any output files from any of the foregoing 
  -- (including device programming or simulation files), and any 
  -- associated documentation or information are expressly subject 
@@ -10,8 +10,7 @@
  -- agreement, including, without limitation, that your use is for
  -- the sole purpose of programming logic devices manufactured by
  -- Intel and sold by Intel or its authorized distributors.  Please
- -- refer to the applicable agreement for further details, at
- -- https://fpgasoftware.intel.com/eula.
+ -- refer to the applicable agreement for further details.
  -- 
  -- This is a Quartus Prime output file. It is for reporting purposes only, and is
  -- not intended for use as a Quartus Prime input file. This file cannot be used
@@ -60,7 +59,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 CHIP  "4bit_ripple_carry_adder"  ASSIGNED TO AN: 5M1270ZT144C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -103,42 +102,42 @@ TCK                          : 35        : input  :                   :         
 TDO                          : 36        : output :                   :         : 1         :                
 GND*                         : 37        :        :                   :         : 4         :                
 GND*                         : 38        :        :                   :         : 4         :                
-GND*                         : 39        :        :                   :         : 4         :                
-GND*                         : 40        :        :                   :         : 4         :                
-GND*                         : 41        :        :                   :         : 4         :                
-GND*                         : 42        :        :                   :         : 4         :                
-GND*                         : 43        :        :                   :         : 4         :                
-GND*                         : 44        :        :                   :         : 4         :                
-GND*                         : 45        :        :                   :         : 4         :                
+input_vector[7]              : 39        : input  : 3.3-V LVTTL       :         : 4         : Y              
+input_vector[6]              : 40        : input  : 3.3-V LVTTL       :         : 4         : Y              
+input_vector[5]              : 41        : input  : 3.3-V LVTTL       :         : 4         : Y              
+input_vector[4]              : 42        : input  : 3.3-V LVTTL       :         : 4         : Y              
+input_vector[3]              : 43        : input  : 3.3-V LVTTL       :         : 4         : Y              
+input_vector[2]              : 44        : input  : 3.3-V LVTTL       :         : 4         : Y              
+input_vector[1]              : 45        : input  : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
 GNDIO                        : 47        : gnd    :                   :         :           :                
-GND*                         : 48        :        :                   :         : 4         :                
-GND*                         : 49        :        :                   :         : 4         :                
-GND*                         : 50        :        :                   :         : 4         :                
-GND*                         : 51        :        :                   :         : 4         :                
-GND*                         : 52        :        :                   :         : 4         :                
-input_vector[1]              : 53        : input  : 3.3-V LVTTL       :         : 4         : N              
+input_vector[8]              : 48        : input  : 3.3-V LVTTL       :         : 4         : Y              
+output_vector[0]             : 49        : output : 3.3-V LVTTL       :         : 4         : Y              
+output_vector[1]             : 50        : output : 3.3-V LVTTL       :         : 4         : Y              
+output_vector[2]             : 51        : output : 3.3-V LVTTL       :         : 4         : Y              
+output_vector[3]             : 52        : output : 3.3-V LVTTL       :         : 4         : Y              
+output_vector[4]             : 53        : output : 3.3-V LVTTL       :         : 4         : Y              
 GNDINT                       : 54        : gnd    :                   :         :           :                
 GND*                         : 55        :        :                   :         : 4         :                
 VCCINT                       : 56        : power  :                   : 1.8V    :           :                
-GND*                         : 57        :        :                   :         : 4         :                
-input_vector[7]              : 58        : input  : 3.3-V LVTTL       :         : 4         : N              
-output_vector[0]             : 59        : output : 3.3-V LVTTL       :         : 4         : N              
-input_vector[8]              : 60        : input  : 3.3-V LVTTL       :         : 4         : N              
-output_vector[1]             : 61        : output : 3.3-V LVTTL       :         : 4         : N              
-input_vector[5]              : 62        : input  : 3.3-V LVTTL       :         : 4         : N              
-input_vector[6]              : 63        : input  : 3.3-V LVTTL       :         : 4         : N              
+input_vector[0]              : 57        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 58        :        :                   :         : 4         :                
+GND*                         : 59        :        :                   :         : 4         :                
+GND*                         : 60        :        :                   :         : 4         :                
+GND*                         : 61        :        :                   :         : 4         :                
+GND*                         : 62        :        :                   :         : 4         :                
+GND*                         : 63        :        :                   :         : 4         :                
 VCCIO4                       : 64        : power  :                   : 3.3V    : 4         :                
 GNDIO                        : 65        : gnd    :                   :         :           :                
-output_vector[4]             : 66        : output : 3.3-V LVTTL       :         : 4         : N              
-input_vector[4]              : 67        : input  : 3.3-V LVTTL       :         : 4         : N              
-output_vector[3]             : 68        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 66        :        :                   :         : 4         :                
+GND*                         : 67        :        :                   :         : 4         :                
+GND*                         : 68        :        :                   :         : 4         :                
 GND*                         : 69        :        :                   :         : 4         :                
-input_vector[3]              : 70        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 70        :        :                   :         : 4         :                
 GND*                         : 71        :        :                   :         : 4         :                
-input_vector[0]              : 72        : input  : 3.3-V LVTTL       :         : 4         : N              
-input_vector[2]              : 73        : input  : 3.3-V LVTTL       :         : 3         : N              
-output_vector[2]             : 74        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 72        :        :                   :         : 4         :                
+GND*                         : 73        :        :                   :         : 3         :                
+GND*                         : 74        :        :                   :         : 3         :                
 GND*                         : 75        :        :                   :         : 3         :                
 GND*                         : 76        :        :                   :         : 3         :                
 GND*                         : 77        :        :                   :         : 3         :                

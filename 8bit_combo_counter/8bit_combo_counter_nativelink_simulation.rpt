@@ -4,8 +4,8 @@ Info: Start Nativelink Simulation process
 
 Sim Mode              :  Gate
 Family                :  maxv
-Quartus root          :  /home/dhruv/intelFPGA_lite/20.1/quartus/linux64/
-Quartus sim root      :  /home/dhruv/intelFPGA_lite/20.1/quartus/eda/sim_lib
+Quartus root          :  /home/student/intelFPGA_lite/18.1/quartus/linux64/
+Quartus sim root      :  /home/student/intelFPGA_lite/18.1/quartus/eda/sim_lib
 Simulation Tool       :  modelsim-altera
 Simulation Language   :  vhdl
 Version               :  93
@@ -17,7 +17,7 @@ Sim dir               :  simulation/modelsim
 =======================================================
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
-Sourced NativeLink script /home/dhruv/intelFPGA_lite/20.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File 8bit_combo_counter_run_msim_gate_vhdl.do already exists - backing up current file as 8bit_combo_counter_run_msim_gate_vhdl.do.bak7
+Sourced NativeLink script /home/student/intelFPGA_lite/18.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File 8bit_combo_counter_run_msim_gate_vhdl.do already exists - backing up current file as 8bit_combo_counter_run_msim_gate_vhdl.do.bak8
 Info: Spawning ModelSim-Altera Simulation software 
 Info: NativeLink simulation flow was successful

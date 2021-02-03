@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5M1270ZT144C5
 set_global_assignment -name TOP_LEVEL_ENTITY DUT
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:37:45  JANUARY 26, 2021"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name VHDL_FILE Full_Adder_code_files/Testbench.vhdl
 set_global_assignment -name VHDL_FILE Full_Adder_code_files/Gates.vhdl
 set_global_assignment -name VHDL_FILE Full_Adder_code_files/Full_Adder.vhdl
@@ -68,3 +68,16 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME dut_instance -section_id Te
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Testbench -section_id Testbench.vhdl
 set_global_assignment -name EDA_TEST_BENCH_FILE Full_Adder_code_files/Testbench.vhdl -section_id Testbench.vhdl
 set_global_assignment -name EDA_TEST_BENCH_FILE Full_Adder_code_files/TRACEFILE.txt -section_id Testbench.vhdl
+set_location_assignment PIN_45 -to input_vector[1]
+set_location_assignment PIN_44 -to input_vector[2]
+set_location_assignment PIN_43 -to input_vector[3]
+set_location_assignment PIN_42 -to input_vector[4]
+set_location_assignment PIN_41 -to input_vector[5]
+set_location_assignment PIN_40 -to input_vector[6]
+set_location_assignment PIN_39 -to input_vector[7]
+set_location_assignment PIN_48 -to input_vector[8]
+set_location_assignment PIN_49 -to output_vector[0]
+set_location_assignment PIN_50 -to output_vector[1]
+set_location_assignment PIN_51 -to output_vector[2]
+set_location_assignment PIN_52 -to output_vector[3]
+set_location_assignment PIN_53 -to output_vector[4]

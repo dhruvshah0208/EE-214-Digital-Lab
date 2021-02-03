@@ -1,35 +1,33 @@
 m255
 K4
 z2
-!s11e vcom 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/dhruv/Documents/EE 214/8bit_combo_counter/simulation/modelsim
+Z0 d/home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/simulation/modelsim
 Edut
-Z1 w1611898982
+Z1 w1612348472
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z3 DPx4 maxv 14 maxv_atom_pack 0 22 oUgm>1dF?35MRi?SjileG1
+Z3 DPx4 maxv 14 maxv_atom_pack 0 22 Ya8[I5bjUA7ZZa]JS8mWW1
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z5 DPx4 maxv 15 maxv_components 0 22 G2W?947ON66eJSA<6[ULC3
+Z5 DPx4 maxv 15 maxv_components 0 22 bHd;G45;WEodZXYE`bM2I1
 Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
 Z8 88bit_combo_counter.vho
 Z9 F8bit_combo_counter.vho
 l0
-L35 1
-VB5YkHbMT8H`oB18LLl1Eo0
-!s100 bhKF@]aRVJfDN;HUBinaG0
-Z10 OV;C;2020.1;71
+L34
+V<>kA4T7j:ATd[RGD::gR90
+!s100 Ke16k28f0E=7dDk`=^jim1
+Z10 OV;C;10.5b;63
 31
-Z11 !s110 1611899059
+Z11 !s110 1612348487
 !i10b 1
-Z12 !s108 1611899059.000000
+Z12 !s108 1612348487.000000
 Z13 !s90 -reportprogress|300|-93|-work|work|8bit_combo_counter.vho|
 Z14 !s107 8bit_combo_counter.vho|
 !i113 1
@@ -42,12 +40,11 @@ R4
 R5
 R6
 R7
-DEx4 work 3 dut 0 22 B5YkHbMT8H`oB18LLl1Eo0
-!i122 0
-l70
-L45 412
-VjNfEK<eEW3[1NmNDQY@=>3
-!s100 9X9fY^z_VVm5]neKS[ikl0
+DEx4 work 3 dut 0 22 <>kA4T7j:ATd[RGD::gR90
+l69
+L44
+VEhZ1`C@UGaVb@[Ajb6jAb0
+!s100 FS<[4:ZG=Wdf^fHm1OGdY1
 R10
 31
 R11
@@ -59,15 +56,14 @@ R14
 R15
 R16
 Etestbench
-Z17 w1611748031
+Z17 w1612345873
 R7
 R6
-!i122 1
 R0
-Z18 8/home/dhruv/Documents/EE 214/8bit_combo_counter/Testbench.vhdl
-Z19 F/home/dhruv/Documents/EE 214/8bit_combo_counter/Testbench.vhdl
+Z18 8/home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Testbench.vhdl
+Z19 F/home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Testbench.vhdl
 l0
-L7 1
+L7
 V]iKK_Z9L:G9B:i8c]3eFH0
 !s100 bWf8kl8zb90X@P1m>V^K20
 R10
@@ -75,8 +71,8 @@ R10
 R11
 !i10b 1
 R12
-Z20 !s90 -reportprogress|300|-93|-work|work|/home/dhruv/Documents/EE 214/8bit_combo_counter/Testbench.vhdl|
-!s107 /home/dhruv/Documents/EE 214/8bit_combo_counter/Testbench.vhdl|
+Z20 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Testbench.vhdl|
+Z21 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Testbench.vhdl|
 !i113 1
 R15
 R16
@@ -84,9 +80,8 @@ Abehave
 R7
 R6
 DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
-!i122 1
 l69
-L9 132
+L9
 ViA50hE?883<36Ihf9kf;V0
 !s100 j]Tol6?9>:VLgi^U0?i7L0
 R10
@@ -95,7 +90,7 @@ R11
 !i10b 1
 R12
 R20
-Z21 !s107 /home/dhruv/Documents/EE 214/8bit_combo_counter/Testbench.vhdl|
+R21
 !i113 1
 R15
 R16

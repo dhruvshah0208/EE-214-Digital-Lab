@@ -8,11 +8,11 @@ input_vector[5] => ripple_carry_adder:add_instance.input_1[0]
 input_vector[6] => ripple_carry_adder:add_instance.input_1[1]
 input_vector[7] => ripple_carry_adder:add_instance.input_1[2]
 input_vector[8] => ripple_carry_adder:add_instance.input_1[3]
-output_vector[0] <= ripple_carry_adder:add_instance.output_sum[0]
-output_vector[1] <= ripple_carry_adder:add_instance.output_sum[1]
-output_vector[2] <= ripple_carry_adder:add_instance.output_sum[2]
-output_vector[3] <= ripple_carry_adder:add_instance.output_sum[3]
-output_vector[4] <= ripple_carry_adder:add_instance.output_carry
+output_vector[0] << ripple_carry_adder:add_instance.output_sum[0]
+output_vector[1] << ripple_carry_adder:add_instance.output_sum[1]
+output_vector[2] << ripple_carry_adder:add_instance.output_sum[2]
+output_vector[3] << ripple_carry_adder:add_instance.output_sum[3]
+output_vector[4] << ripple_carry_adder:add_instance.output_carry
 
 
 |DUT|ripple_carry_adder:add_instance

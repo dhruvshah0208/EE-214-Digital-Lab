@@ -1,6 +1,6 @@
 Analysis & Synthesis report for 8bit_combo_counter
-Fri Jan 29 11:12:49 2021
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Wed Feb  3 16:09:49 2021
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -21,9 +21,9 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -33,16 +33,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Jan 29 11:12:49 2021       ;
-; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status ; Successful - Wed Feb  3 16:09:49 2021       ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; 8bit_combo_counter                          ;
 ; Top-level Entity Name       ; DUT                                         ;
 ; Family                      ; MAX V                                       ;
@@ -140,16 +139,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; Gates.vhdl                       ; yes             ; User VHDL File  ; /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl          ;         ;
-; Full_Adder.vhdl                  ; yes             ; User VHDL File  ; /home/dhruv/Documents/EE 214/8bit_combo_counter/Full_Adder.vhdl     ;         ;
-; DUT.vhdl                         ; yes             ; User VHDL File  ; /home/dhruv/Documents/EE 214/8bit_combo_counter/DUT.vhdl            ;         ;
-; combo_8_counter.vhd              ; yes             ; User VHDL File  ; /home/dhruv/Documents/EE 214/8bit_combo_counter/combo_8_counter.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
+; Gates.vhdl                       ; yes             ; User VHDL File  ; /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl          ;         ;
+; Full_Adder.vhdl                  ; yes             ; User VHDL File  ; /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Full_Adder.vhdl     ;         ;
+; DUT.vhdl                         ; yes             ; User VHDL File  ; /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/DUT.vhdl            ;         ;
+; combo_8_counter.vhd              ; yes             ; User VHDL File  ; /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/combo_8_counter.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -229,53 +228,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Jan 29 11:12:36 2021
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Feb  3 16:09:37 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8bit_combo_counter -c 8bit_combo_counter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 17 design units, including 8 entities, in source file Gates.vhdl
-    Info (12022): Found design unit 1: Gates File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 3
-    Info (12022): Found design unit 2: INVERTER-Equations File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 45
-    Info (12022): Found design unit 3: AND_2-Equations File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 57
-    Info (12022): Found design unit 4: NAND_2-Equations File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 68
-    Info (12022): Found design unit 5: OR_2-Equations File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 79
-    Info (12022): Found design unit 6: NOR_2-Equations File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 90
-    Info (12022): Found design unit 7: XOR_2-Equations File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 102
-    Info (12022): Found design unit 8: XNOR_2-Equations File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 113
-    Info (12022): Found design unit 9: HALF_ADDER-Equations File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 124
-    Info (12023): Found entity 1: INVERTER File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 41
-    Info (12023): Found entity 2: AND_2 File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 53
-    Info (12023): Found entity 3: NAND_2 File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 64
-    Info (12023): Found entity 4: OR_2 File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 75
-    Info (12023): Found entity 5: NOR_2 File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 86
-    Info (12023): Found entity 6: XOR_2 File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 98
-    Info (12023): Found entity 7: XNOR_2 File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 109
-    Info (12023): Found entity 8: HALF_ADDER File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Gates.vhdl Line: 120
+    Info (12022): Found design unit 1: Gates File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 3
+    Info (12022): Found design unit 2: INVERTER-Equations File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 45
+    Info (12022): Found design unit 3: AND_2-Equations File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 57
+    Info (12022): Found design unit 4: NAND_2-Equations File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 68
+    Info (12022): Found design unit 5: OR_2-Equations File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 79
+    Info (12022): Found design unit 6: NOR_2-Equations File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 90
+    Info (12022): Found design unit 7: XOR_2-Equations File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 102
+    Info (12022): Found design unit 8: XNOR_2-Equations File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 113
+    Info (12022): Found design unit 9: HALF_ADDER-Equations File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 124
+    Info (12023): Found entity 1: INVERTER File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 41
+    Info (12023): Found entity 2: AND_2 File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 53
+    Info (12023): Found entity 3: NAND_2 File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 64
+    Info (12023): Found entity 4: OR_2 File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 75
+    Info (12023): Found entity 5: NOR_2 File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 86
+    Info (12023): Found entity 6: XOR_2 File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 98
+    Info (12023): Found entity 7: XNOR_2 File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 109
+    Info (12023): Found entity 8: HALF_ADDER File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Gates.vhdl Line: 120
 Info (12021): Found 2 design units, including 1 entities, in source file Full_Adder.vhdl
-    Info (12022): Found design unit 1: Full_Adder-Struct File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Full_Adder.vhdl Line: 10
-    Info (12023): Found entity 1: Full_Adder File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Full_Adder.vhdl Line: 7
+    Info (12022): Found design unit 1: Full_Adder-Struct File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Full_Adder.vhdl Line: 10
+    Info (12023): Found entity 1: Full_Adder File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Full_Adder.vhdl Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file DUT.vhdl
-    Info (12022): Found design unit 1: DUT-DutWrap File: /home/dhruv/Documents/EE 214/8bit_combo_counter/DUT.vhdl Line: 13
-    Info (12023): Found entity 1: DUT File: /home/dhruv/Documents/EE 214/8bit_combo_counter/DUT.vhdl Line: 8
+    Info (12022): Found design unit 1: DUT-DutWrap File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/DUT.vhdl Line: 13
+    Info (12023): Found entity 1: DUT File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/DUT.vhdl Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file combo_8_counter.vhd
-    Info (12022): Found design unit 1: combo_8_counter-Struct File: /home/dhruv/Documents/EE 214/8bit_combo_counter/combo_8_counter.vhd Line: 11
-    Info (12023): Found entity 1: combo_8_counter File: /home/dhruv/Documents/EE 214/8bit_combo_counter/combo_8_counter.vhd Line: 7
+    Info (12022): Found design unit 1: combo_8_counter-Struct File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/combo_8_counter.vhd Line: 11
+    Info (12023): Found entity 1: combo_8_counter File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/combo_8_counter.vhd Line: 7
 Info (12127): Elaborating entity "DUT" for the top level hierarchy
-Info (12128): Elaborating entity "combo_8_counter" for hierarchy "combo_8_counter:add_instance" File: /home/dhruv/Documents/EE 214/8bit_combo_counter/DUT.vhdl Line: 21
-Info (12128): Elaborating entity "HALF_ADDER" for hierarchy "combo_8_counter:add_instance|HALF_ADDER:H1" File: /home/dhruv/Documents/EE 214/8bit_combo_counter/combo_8_counter.vhd Line: 19
-Info (12128): Elaborating entity "Full_Adder" for hierarchy "combo_8_counter:add_instance|Full_Adder:F1" File: /home/dhruv/Documents/EE 214/8bit_combo_counter/combo_8_counter.vhd Line: 25
-Info (12128): Elaborating entity "AND_2" for hierarchy "combo_8_counter:add_instance|Full_Adder:F1|AND_2:a1" File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Full_Adder.vhdl Line: 18
-Info (12128): Elaborating entity "OR_2" for hierarchy "combo_8_counter:add_instance|Full_Adder:F1|OR_2:o1" File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Full_Adder.vhdl Line: 19
-Info (12128): Elaborating entity "XOR_2" for hierarchy "combo_8_counter:add_instance|Full_Adder:F1|XOR_2:x1" File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Full_Adder.vhdl Line: 22
+Info (12128): Elaborating entity "combo_8_counter" for hierarchy "combo_8_counter:add_instance" File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/DUT.vhdl Line: 21
+Info (12128): Elaborating entity "HALF_ADDER" for hierarchy "combo_8_counter:add_instance|HALF_ADDER:H1" File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/combo_8_counter.vhd Line: 19
+Info (12128): Elaborating entity "Full_Adder" for hierarchy "combo_8_counter:add_instance|Full_Adder:F1" File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/combo_8_counter.vhd Line: 25
+Info (12128): Elaborating entity "AND_2" for hierarchy "combo_8_counter:add_instance|Full_Adder:F1|AND_2:a1" File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Full_Adder.vhdl Line: 18
+Info (12128): Elaborating entity "OR_2" for hierarchy "combo_8_counter:add_instance|Full_Adder:F1|OR_2:o1" File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Full_Adder.vhdl Line: 19
+Info (12128): Elaborating entity "XOR_2" for hierarchy "combo_8_counter:add_instance|Full_Adder:F1|XOR_2:x1" File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Full_Adder.vhdl Line: 22
 Info (21057): Implemented 23 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 11 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 427 megabytes
-    Info: Processing ended: Fri Jan 29 11:12:49 2021
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 945 megabytes
+    Info: Processing ended: Wed Feb  3 16:09:49 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
 
 

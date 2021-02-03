@@ -4,14 +4,14 @@
 # }
 # vlib gate_work
 # vmap work gate_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work gate_work 
-# Copying /home/dhruv/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Copying /home/student/intelFPGA_lite/18.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
 # vcom -93 -work work {8bit_combo_counter.vho}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:14:19 on Jan 29,2021
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:04:47 on Feb 03,2021
 # vcom -reportprogress 300 -93 -work work 8bit_combo_counter.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -22,29 +22,29 @@
 # -- Loading package maxv_components
 # -- Compiling entity DUT
 # -- Compiling architecture structure of DUT
-# End time: 11:14:19 on Jan 29,2021, Elapsed time: 0:00:00
+# End time: 16:04:47 on Feb 03,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {/home/dhruv/Documents/EE 214/8bit_combo_counter/Testbench.vhdl}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:14:19 on Jan 29,2021
-# vcom -reportprogress 300 -93 -work work /home/dhruv/Documents/EE 214/8bit_combo_counter/Testbench.vhdl 
+# vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:04:47 on Feb 03,2021
+# vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Testbench.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Testbench
 # -- Compiling architecture Behave of Testbench
-# End time: 11:14:19 on Jan 29,2021, Elapsed time: 0:00:00
+# End time: 16:04:47 on Feb 03,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /dut_instance=8bit_combo_counter_vhd.sdo -L maxv -L gate_work -L work -voptargs="+acc"  Testbench
-# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -sdftyp "/dut_instance=8bit_combo_counter_vhd.sdo" -L maxv -L gate_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 11:14:19 on Jan 29,2021
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -sdftyp /dut_instance=8bit_combo_counter_vhd.sdo -L maxv -L gate_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 16:04:47 on Feb 03,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.testbench(behave)
-# SDF 2020.1 Compiler 2020.02 Feb 28 2020
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading maxv.maxv_atom_pack(body)
@@ -58,7 +58,7 @@
 # Loading instances from 8bit_combo_counter_vhd.sdo
 # Loading timing data from 8bit_combo_counter_vhd.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: /home/dhruv/Documents/EE 214/8bit_combo_counter/Testbench.vhdl
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: /home/student/Documents/EE_214/EE-214-Digital-Lab/8bit_combo_counter/Testbench.vhdl
 # 
 # add wave *
 # view structure
@@ -70,5 +70,5 @@
 #    Time: 6144 ns  Iteration: 0  Instance: /testbench
 # 
 # stdin: <EOF>
-# End time: 11:15:27 on Jan 29,2021, Elapsed time: 0:01:08
+# End time: 16:04:57 on Feb 03,2021, Elapsed time: 0:00:10
 # Errors: 0, Warnings: 0
