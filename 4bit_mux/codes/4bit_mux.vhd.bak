@@ -1,0 +1,26 @@
+-- A DUT entity is used to wrap your design.
+--  This example shows how you can do this for the
+--  Full-adder.
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity 4bit_mux is
+   port(
+		input_vector: in std_logic_vector(4 downto 1);
+		output: out std_logic;
+		control_signals:in std_logic_vector(2 downto 1);
+		enable : in std_logic;
+		);
+end entity;
+
+architecture structural of 4bit_mux is
+signal interconnect: std_logic_vector(4 downto 1);
+begin
+interconnect(1) <= (not control_signals(2)) and (not control_signals(1)) and input_vector(1) and enable;
+interconnect(2) <= (not control_signals(2)) and (control_signals(1)) and input_vector(2) and enable;
+interconnect(3) <= (control_signals(2)) and (not control_signals(1)) and input_vector(3) and enable;
+interconnect(4) <= (control_signals(2)) and (control_signals(1)) and input_vector(4) and enable;
+
+end structural;
+

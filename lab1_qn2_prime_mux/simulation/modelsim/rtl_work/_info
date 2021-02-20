@@ -1,0 +1,579 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/simulation/modelsim
+Eadd_sub_4_bit
+Z1 w1612957229
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/add_sub_4bit.vhd
+Z5 F/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/add_sub_4bit.vhd
+l0
+L8
+VZI8iK=B;kN3m?YTL06d1A2
+!s100 IEF`3mQ2I7[HaKIF]eVj?3
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1613558935
+!i10b 1
+Z8 !s108 1613558935.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/add_sub_4bit.vhd|
+Z10 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/add_sub_4bit.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+DEx4 work 13 add_sub_4_bit 0 22 ZI8iK=B;kN3m?YTL06d1A2
+l25
+L18
+VVN]bN=jJ:`Kn;e1n3_UN?0
+!s100 i3iY5J822U@=>[=iWL[D71
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eand_2
+Z13 w1612345873
+R2
+R3
+R0
+Z14 8/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Gates.vhdl
+Z15 F/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Gates.vhdl
+l0
+L53
+VU7DI`Tzl@EfAQ?4z53E2F2
+!s100 1`nWBgISBZCVoBKm`L3TM3
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Gates.vhdl|
+Z17 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Gates.vhdl|
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 and_2 0 22 U7DI`Tzl@EfAQ?4z53E2F2
+l58
+L57
+Vlhgfe[LY0eM?e_R:VHaZ:1
+!s100 6Ea@T?V>e39O6cgPlk<iS0
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Edut
+Z18 w1612955955
+R2
+R3
+R0
+Z19 8/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/DUT.vhdl
+Z20 F/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/DUT.vhdl
+l0
+L8
+VLQ?Ec]aLIQP[<J=[5NzHU2
+!s100 Re3JWDj^Wc_HXBo4HTcJH0
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/DUT.vhdl|
+Z22 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 LQ?Ec]aLIQP[<J=[5NzHU2
+l23
+L13
+V=hD`;Lz5fTM<AP@MG3^OV2
+!s100 cZm2G?O_JHFWZ72nXjDXF2
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Efull_adder
+Z23 w1612952007
+Z24 DPx4 work 5 gates 0 22 @eB5S<QWaBmXNA4jc;3?G2
+R2
+R3
+R0
+Z25 8/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Full_Adder.vhdl
+Z26 F/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Full_Adder.vhdl
+l0
+L7
+VJ>TSK3V@fa0>oCX`@NTfi0
+!s100 X:XV7b@_a6eVIh2TXeXU:2
+R6
+31
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Full_Adder.vhdl|
+Z28 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Full_Adder.vhdl|
+!i113 1
+R11
+R12
+Astruct
+R24
+R2
+R3
+DEx4 work 10 full_adder 0 22 J>TSK3V@fa0>oCX`@NTfi0
+l13
+L11
+VkeO3;A3lhcKaAI1G:no0G1
+!s100 lmQ1_>[Jgm:cDiUGjCadf2
+R6
+31
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Pgates
+R2
+R3
+R13
+R0
+R14
+R15
+l0
+L3
+V@eB5S<QWaBmXNA4jc;3?G2
+!s100 N@iIgLVJlGZzK36CC:zf23
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Ehalf_adder
+R13
+R2
+R3
+R0
+R14
+R15
+l0
+L120
+VOAZ_4ioR^1B[UAcaA1zf51
+!s100 oLN8>k[AMhPS;D9;:Z@Pz0
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 10 half_adder 0 22 OAZ_4ioR^1B[UAcaA1zf51
+l125
+L124
+VflMPld^`b]>0KKXzZhX_91
+!s100 ]f4Ql:1od=>zjRGlb:Lm:0
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Einverter
+R13
+R2
+R3
+R0
+R14
+R15
+l0
+L41
+V82BXV;Uza[l3mE]`8B<HJ0
+!s100 dFc@GWJO@nF57X0IXFVfh0
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 8 inverter 0 22 82BXV;Uza[l3mE]`8B<HJ0
+l46
+L45
+V4]gW5EV5;RT@9C;Pga@SA0
+!s100 [DD^:ihbY=VNQeLiKKX_R1
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Enand_2
+R13
+R2
+R3
+R0
+R14
+R15
+l0
+L64
+VS^YD8?>b_]W^^dkQa>_3m2
+!s100 S;kgn2U384cOg4>1Kcdn<2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 nand_2 0 22 S^YD8?>b_]W^^dkQa>_3m2
+l69
+L68
+VS]`6`a7Bz3gbaB=WX@WdM2
+!s100 EBK=7IM2m_0=gIZGM@F7H1
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Enor_2
+R13
+R2
+R3
+R0
+R14
+R15
+l0
+L86
+V`A=6DP8fY`aBzcQ@Hgc?S1
+!s100 hCNF9lV5T>8fg2MR^]6f^0
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 nor_2 0 22 `A=6DP8fY`aBzcQ@Hgc?S1
+l91
+L90
+VIJ=]C?8]dETGzmXBGe8in2
+!s100 iWUJUdMb8DJi]m^=42G9F3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Eor_2
+R13
+R2
+R3
+R0
+R14
+R15
+l0
+L75
+Ve?I6M>DO0lb4QOFDA10zP2
+!s100 _]<JbSG1DCI^d;kKCeeO:3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 4 or_2 0 22 e?I6M>DO0lb4QOFDA10zP2
+l80
+L79
+V35?1APMW04D0M8BcdBhJ53
+!s100 kX9QLgDQM=e4dN7zDYk6o2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Eprime_check_4_bit
+Z29 w1612949412
+R2
+R3
+R0
+Z30 8/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/prime_check_4_bit.vhd
+Z31 F/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/prime_check_4_bit.vhd
+l0
+L8
+VI0I]64:AX9]V^MIMja>oF1
+!s100 11@mOa1;[?3c[0OWb?YBT1
+R6
+31
+R7
+!i10b 1
+R8
+Z32 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/prime_check_4_bit.vhd|
+Z33 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/prime_check_4_bit.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 17 prime_check_4_bit 0 22 I0I]64:AX9]V^MIMja>oF1
+l18
+L16
+VYPj0gR1GWYegn]a?Q=Hzk3
+!s100 K7CYKe[97J3N9i51EWB2?1
+R6
+31
+R7
+!i10b 1
+R8
+R32
+R33
+!i113 1
+R11
+R12
+Eprime_mux
+Z34 w1612957347
+R2
+R3
+R0
+Z35 8/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/prime_mux.vhd
+Z36 F/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/prime_mux.vhd
+l0
+L8
+VCl?cg_g7V]3;ce0ijHMY80
+!s100 GB9nK_nKV6M6DJ;OJO3`>0
+R6
+31
+R7
+!i10b 1
+R8
+Z37 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/prime_mux.vhd|
+Z38 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/prime_mux.vhd|
+!i113 1
+R11
+R12
+Astruct
+R2
+R3
+DEx4 work 9 prime_mux 0 22 Cl?cg_g7V]3;ce0ijHMY80
+l43
+L18
+VkcPY`4[Jfe=od:Hl?UeKe0
+!s100 8:B?Q4G6f05Bz^65AQJnM1
+R6
+31
+R7
+!i10b 1
+R8
+R37
+R38
+!i113 1
+R11
+R12
+Etestbench
+Z39 w1612956082
+R3
+R2
+R0
+Z40 8/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Testbench.vhdl
+Z41 F/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Testbench.vhdl
+l0
+L7
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+R8
+Z42 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Testbench.vhdl|
+Z43 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/lab1_qn2_prime_mux/codes/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+l69
+L9
+VzeoAOWAKzc;b>BiT2TH]R0
+!s100 IRe0L==TXk4W[^7=N9>Q93
+R6
+31
+R7
+!i10b 1
+R8
+R42
+R43
+!i113 1
+R11
+R12
+Exnor_2
+R13
+R2
+R3
+R0
+R14
+R15
+l0
+L109
+VLHIUEA1`23`S5JTPo4JYA2
+!s100 M7SmBC<JLShUJ=5Tb^BGR1
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 xnor_2 0 22 LHIUEA1`23`S5JTPo4JYA2
+l114
+L113
+V]AR[iEm:1Y`=`f78Ab8?A2
+!s100 2L8]1Q4cBgn^[7D^6oj0;3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Exor_2
+R13
+R2
+R3
+R0
+R14
+R15
+l0
+L98
+VV2P2KWfUW5e1Z=NMXBDJ;0
+!s100 DUe=@W;GH8KgEREMWIRML1
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 xor_2 0 22 V2P2KWfUW5e1Z=NMXBDJ;0
+l103
+L102
+VQUFBaT6OJ>c<=2In4b:>M1
+!s100 _g>6CYjRMmc7O[`k^N;co3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12

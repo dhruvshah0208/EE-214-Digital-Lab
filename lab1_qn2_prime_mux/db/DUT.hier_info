@@ -1,0 +1,241 @@
+|DUT
+input_vector[0] => prime_mux:add_instance.inputB[0]
+input_vector[1] => prime_mux:add_instance.inputB[1]
+input_vector[2] => prime_mux:add_instance.inputB[2]
+input_vector[3] => prime_mux:add_instance.inputB[3]
+input_vector[4] => prime_mux:add_instance.inputA[0]
+input_vector[5] => prime_mux:add_instance.inputA[1]
+input_vector[6] => prime_mux:add_instance.inputA[2]
+input_vector[7] => prime_mux:add_instance.inputA[3]
+output_vector[0] << prime_mux:add_instance.LED5_1[0]
+output_vector[1] << prime_mux:add_instance.LED5_1[1]
+output_vector[2] << prime_mux:add_instance.LED5_1[2]
+output_vector[3] << prime_mux:add_instance.LED5_1[3]
+output_vector[4] << prime_mux:add_instance.LED5_1[4]
+output_vector[5] << prime_mux:add_instance.LED7
+output_vector[6] << prime_mux:add_instance.LED8
+
+
+|DUT|prime_mux:add_instance
+inputA[0] => prime_check_4_bit:prime_check_1.inputs[0]
+inputA[0] => add_sub_4_bit:A_S.input1[0]
+inputA[1] => prime_check_4_bit:prime_check_1.inputs[1]
+inputA[1] => add_sub_4_bit:A_S.input1[1]
+inputA[2] => prime_check_4_bit:prime_check_1.inputs[2]
+inputA[2] => add_sub_4_bit:A_S.input1[2]
+inputA[3] => prime_check_4_bit:prime_check_1.inputs[3]
+inputA[3] => add_sub_4_bit:A_S.input1[3]
+inputB[0] => prime_check_4_bit:prime_check_2.inputs[0]
+inputB[0] => add_sub_4_bit:A_S.input2[0]
+inputB[1] => prime_check_4_bit:prime_check_2.inputs[1]
+inputB[1] => add_sub_4_bit:A_S.input2[1]
+inputB[2] => prime_check_4_bit:prime_check_2.inputs[2]
+inputB[2] => add_sub_4_bit:A_S.input2[2]
+inputB[3] => prime_check_4_bit:prime_check_2.inputs[3]
+inputB[3] => add_sub_4_bit:A_S.input2[3]
+LED7 <= prime_check_4_bit:prime_check_2.output
+LED8 <= prime_check_4_bit:prime_check_1.output
+LED5_1[0] <= LED5_1.DB_MAX_OUTPUT_PORT_TYPE
+LED5_1[1] <= LED5_1.DB_MAX_OUTPUT_PORT_TYPE
+LED5_1[2] <= LED5_1.DB_MAX_OUTPUT_PORT_TYPE
+LED5_1[3] <= LED5_1.DB_MAX_OUTPUT_PORT_TYPE
+LED5_1[4] <= LED5_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|prime_check_4_bit:prime_check_1
+inputs[0] => output.IN1
+inputs[0] => output.IN1
+inputs[0] => output.IN1
+inputs[1] => output.IN1
+inputs[1] => output.IN0
+inputs[1] => output.IN0
+inputs[1] => output.IN0
+inputs[2] => output.IN1
+inputs[2] => output.IN0
+inputs[2] => output.IN1
+inputs[3] => output.IN1
+inputs[3] => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|prime_check_4_bit:prime_check_2
+inputs[0] => output.IN1
+inputs[0] => output.IN1
+inputs[0] => output.IN1
+inputs[1] => output.IN1
+inputs[1] => output.IN0
+inputs[1] => output.IN0
+inputs[1] => output.IN0
+inputs[2] => output.IN1
+inputs[2] => output.IN0
+inputs[2] => output.IN1
+inputs[3] => output.IN1
+inputs[3] => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S
+input1[0] => Full_Adder:G_1:0:FA.A
+input1[1] => Full_Adder:G_1:1:FA.A
+input1[2] => Full_Adder:G_1:2:FA.A
+input1[3] => Full_Adder:G_1:3:FA.A
+input2[0] => intermediate_signal[0].IN0
+input2[1] => intermediate_signal[1].IN0
+input2[2] => intermediate_signal[2].IN0
+input2[3] => intermediate_signal[3].IN0
+input_carry => intermediate_signal[0].IN1
+input_carry => intermediate_signal[1].IN1
+input_carry => intermediate_signal[2].IN1
+input_carry => intermediate_signal[3].IN1
+input_carry => Full_Adder:G_1:0:FA.Cin
+output_sum[0] <= Full_Adder:G_1:0:FA.S
+output_sum[1] <= Full_Adder:G_1:1:FA.S
+output_sum[2] <= Full_Adder:G_1:2:FA.S
+output_sum[3] <= Full_Adder:G_1:3:FA.S
+output_carry <= Full_Adder:G_1:3:FA.Cout
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:0:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:0:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:0:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:0:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:0:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:1:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:1:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:1:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:1:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:1:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:2:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:2:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:2:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:2:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:2:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:3:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:3:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:3:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:3:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime_mux:add_instance|add_sub_4_bit:A_S|Full_Adder:\G_1:3:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

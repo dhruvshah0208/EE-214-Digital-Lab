@@ -1,0 +1,31 @@
+|DUT
+input_vector[0] => mux:add_instance.inputs[4]
+input_vector[1] => mux:add_instance.inputs[3]
+input_vector[2] => mux:add_instance.inputs[2]
+input_vector[3] => mux:add_instance.inputs[1]
+input_vector[4] => mux:add_instance.control_signals[1]
+input_vector[5] => mux:add_instance.control_signals[2]
+input_vector[6] => mux:add_instance.enable
+output_vector[0] << mux:add_instance.output
+
+
+|DUT|mux:add_instance
+enable => interconnect[1].IN1
+enable => interconnect[2].IN1
+enable => interconnect[3].IN1
+enable => interconnect[4].IN1
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+inputs[1] => interconnect.IN1
+inputs[2] => interconnect.IN1
+inputs[3] => interconnect.IN1
+inputs[4] => interconnect.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
