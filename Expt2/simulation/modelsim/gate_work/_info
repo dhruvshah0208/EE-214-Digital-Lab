@@ -1,0 +1,72 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/simulation/modelsim
+vDUT
+Z1 !s110 1614770292
+!i10b 1
+!s100 7h[?AWnBVgh]9h8SGPCNc3
+Iln5`BiKSPdJkNNH0U:Zem0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1614770162
+8multiplier.vo
+Fmultiplier.vo
+L0 31
+OV;L;10.5b;63
+r1
+!s85 0
+31
+Z2 !s108 1614770292.000000
+!s107 multiplier.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|multiplier.vo|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+tCvgOpt 0
+n@d@u@t
+Etestbench
+Z3 w1614768291
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+R0
+Z6 8/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl
+Z7 F/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl
+l0
+L7
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+Z8 OV;C;10.5b;63
+31
+R1
+!i10b 1
+R2
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl|
+Z10 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehave
+R4
+R5
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+l69
+L9
+Vj?f^4QccZKJEX?4lzc_Cc3
+!s100 O0<WeHcVoHEh9H2j==FLR2
+R8
+31
+R1
+!i10b 1
+R2
+R9
+R10
+!i113 1
+R11
+R12
