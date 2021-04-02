@@ -1,0 +1,148 @@
+# do BCD_addition_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /home/student/intelFPGA_lite/18.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/standard code files/4bit_ripple_carry_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:28:27 on Mar 06,2021
+# vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/standard code files/4bit_ripple_carry_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ripple_carry_adder
+# -- Compiling architecture structural of ripple_carry_adder
+# End time: 01:28:27 on Mar 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/standard code files/Gates.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:28:27 on Mar 06,2021
+# vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/standard code files/Gates.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package Gates
+# -- Compiling entity INVERTER
+# -- Compiling architecture Equations of INVERTER
+# -- Compiling entity AND_2
+# -- Compiling architecture Equations of AND_2
+# -- Compiling entity NAND_2
+# -- Compiling architecture Equations of NAND_2
+# -- Compiling entity OR_2
+# -- Compiling architecture Equations of OR_2
+# -- Compiling entity NOR_2
+# -- Compiling architecture Equations of NOR_2
+# -- Compiling entity XOR_2
+# -- Compiling architecture Equations of XOR_2
+# -- Compiling entity XNOR_2
+# -- Compiling architecture Equations of XNOR_2
+# -- Compiling entity HALF_ADDER
+# -- Compiling architecture Equations of HALF_ADDER
+# End time: 01:28:27 on Mar 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/standard code files/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:28:27 on Mar 06,2021
+# vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/standard code files/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 01:28:27 on Mar 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/codes/BCD_check.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:28:27 on Mar 06,2021
+# vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/codes/BCD_check.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BCD_check
+# -- Compiling architecture structural of BCD_check
+# End time: 01:28:27 on Mar 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/codes/decimal_adjust.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:28:27 on Mar 06,2021
+# vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/codes/decimal_adjust.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decimal_adjust
+# -- Compiling architecture structural of decimal_adjust
+# End time: 01:28:27 on Mar 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/codes/mux_2_bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:28:27 on Mar 06,2021
+# vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/codes/mux_2_bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_bit
+# -- Compiling architecture structural of mux_2_bit
+# End time: 01:28:27 on Mar 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/standard code files/Full_Adder.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:28:27 on Mar 06,2021
+# vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/standard code files/Full_Adder.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity Full_Adder
+# -- Compiling architecture Struct of Full_Adder
+# End time: 01:28:27 on Mar 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/standard code files/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:28:27 on Mar 06,2021
+# vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE-214-Digital-Lab/EXPT1_Thursday/standard code files/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 01:28:27 on Mar 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 01:28:27 on Mar 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading work.decimal_adjust(structural)
+# Loading work.bcd_check(structural)
+# Loading work.ripple_carry_adder(structural)
+# Loading work.gates
+# Loading work.full_adder(struct)
+# Loading work.half_adder(equations)
+# Loading work.and_2(equations)
+# Loading work.or_2(equations)
+# Loading work.xor_2(equations)
+# Loading work.mux_2_bit(structural)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 96 ns  Iteration: 0  Instance: /testbench
+# 
+# stdin: <EOF>
+# End time: 01:28:35 on Mar 06,2021, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 0

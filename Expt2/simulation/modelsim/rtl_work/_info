@@ -21,9 +21,9 @@ Veje36]_lYDgAG<I87X0Kh3
 !s100 ;?d`6N@dO9U3;P;cV=]`G0
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1614770177
+Z7 !s110 1615014601
 !i10b 1
-Z8 !s108 1614770177.000000
+Z8 !s108 1615014601.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/DUT.vhdl|
 Z10 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/DUT.vhdl|
 !i113 1
@@ -86,13 +86,95 @@ R17
 !i113 1
 R11
 R12
+Escan_chain
+Z18 w1549971156
+Z19 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z20 8/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/scan_chain.vhdl
+Z21 F/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/scan_chain.vhdl
+l0
+L10
+VAlVBYFI5hDH[WHJd2kVEL1
+!s100 EDKS_ZA11R2:C]LfzfaMG0
+R6
+31
+Z22 !s110 1615014600
+!i10b 1
+Z23 !s108 1615014600.000000
+Z24 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/scan_chain.vhdl|
+Z25 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/scan_chain.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R19
+R2
+R3
+DEx4 work 10 scan_chain 0 22 AlVBYFI5hDH[WHJd2kVEL1
+l50
+L26
+VgCTHi5;N[0F8kE9DHT@0K0
+!s100 HbFzfa3^LFYN4Ph0ccY3R3
+R6
+31
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R11
+R12
+Escan_reg
+R18
+R19
+R2
+R3
+R0
+Z26 8/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/scan_reg.vhdl
+Z27 F/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/scan_reg.vhdl
+l0
+L10
+V3Wi708m]9[VLE]>:WhLJG1
+!s100 fV;z;aQWmoR7bL7c8Oba<0
+R6
+31
+R22
+!i10b 1
+R23
+Z28 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/scan_reg.vhdl|
+Z29 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/scan_reg.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R19
+R2
+R3
+DEx4 work 8 scan_reg 0 22 3Wi708m]9[VLE]>:WhLJG1
+l29
+L26
+VToWlIoB5V8MT=K7Sd8n813
+!s100 gGe5fUn90TYSDna;5?hMX2
+R6
+31
+R22
+!i10b 1
+R23
+R28
+R29
+!i113 1
+R11
+R12
 Etestbench
-Z18 w1614768291
+Z30 w1614768291
 R3
 R2
 R0
-Z19 8/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl
-Z20 F/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl
+Z31 8/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl
+Z32 F/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl
 l0
 L7
 V]iKK_Z9L:G9B:i8c]3eFH0
@@ -102,8 +184,8 @@ R6
 R7
 !i10b 1
 R8
-Z21 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl|
-Z22 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl|
+Z33 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl|
+Z34 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/Testbench.vhdl|
 !i113 1
 R11
 R12
@@ -120,8 +202,47 @@ R6
 R7
 !i10b 1
 R8
-R21
-R22
+R33
+R34
+!i113 1
+R11
+R12
+Etoplevel
+Z35 w1614770671
+R2
+R3
+R0
+Z36 8/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/TopLevel.vhdl
+Z37 F/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/TopLevel.vhdl
+l0
+L11
+V`MfX76`F7bA32^B7AA>?j2
+!s100 >NWU<Qc1QXFDoUXY1;CDl0
+R6
+31
+R7
+!i10b 1
+R23
+Z38 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/TopLevel.vhdl|
+Z39 !s107 /home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/TopLevel.vhdl|
+!i113 1
+R11
+R12
+Astruct
+R2
+R3
+DEx4 work 8 toplevel 0 22 `MfX76`F7bA32^B7AA>?j2
+l63
+L21
+V_i^RK4l25=THc2:@b2c4F3
+!s100 ;1cDZYbQo?ef6I6=_g@;Y0
+R6
+31
+R7
+!i10b 1
+R23
+R38
+R39
 !i113 1
 R11
 R12

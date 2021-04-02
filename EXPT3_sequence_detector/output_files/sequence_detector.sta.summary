@@ -1,0 +1,37 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'TCLK'
+Slack : -7.443
+TNS   : -46.710
+
+Type  : Setup 'TRST'
+Slack : -4.616
+TNS   : -10.472
+
+Type  : Hold 'TRST'
+Slack : -0.008
+TNS   : -0.011
+
+Type  : Hold 'TCLK'
+Slack : 0.853
+TNS   : 0.000
+
+Type  : Recovery 'TCLK'
+Slack : -1.140
+TNS   : -5.700
+
+Type  : Removal 'TCLK'
+Slack : 1.086
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'TCLK'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'TRST'
+Slack : -2.289
+TNS   : -2.289
+
+------------------------------------------------------------

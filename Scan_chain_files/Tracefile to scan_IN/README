@@ -1,0 +1,5 @@
+SYNTAX:
+python scan_input.py <TRACEFILE NAME> <ScanChain input file name> <no.of input> <no. of output>
+
+example:
+python scan_input.py TRACEFILE.txt in.txt 3 2

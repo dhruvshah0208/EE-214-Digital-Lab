@@ -1,0 +1,992 @@
+|DUT
+input_vector[0] => toplevel:add_instance.B[0]
+input_vector[1] => toplevel:add_instance.B[1]
+input_vector[2] => toplevel:add_instance.B[2]
+input_vector[3] => toplevel:add_instance.B[3]
+input_vector[4] => toplevel:add_instance.A[0]
+input_vector[5] => toplevel:add_instance.A[1]
+input_vector[6] => toplevel:add_instance.A[2]
+input_vector[7] => toplevel:add_instance.A[3]
+output_vector[0] << toplevel:add_instance.Y[0]
+output_vector[1] << toplevel:add_instance.Y[1]
+output_vector[2] << toplevel:add_instance.Y[2]
+output_vector[3] << toplevel:add_instance.Y[3]
+output_vector[4] << toplevel:add_instance.Y[4]
+output_vector[5] << toplevel:add_instance.Y[5]
+
+
+|DUT|toplevel:add_instance
+A[0] => interconnect_1[3].IN0
+A[0] => BCD_ADD:case_1.A[0]
+A[0] => DCR_A:case_2.A[0]
+A[0] => mux:mux_1.inputs[1]
+A[1] => interconnect_2[3].IN0
+A[1] => BCD_ADD:case_1.A[1]
+A[1] => DCR_A:case_2.A[1]
+A[1] => mux:mux_2.inputs[1]
+A[2] => interconnect_3[3].IN0
+A[2] => BCD_ADD:case_1.A[2]
+A[2] => DCR_A:case_2.A[2]
+A[2] => mux:mux_3.inputs[1]
+A[3] => interconnect_4[3].IN0
+A[3] => BCD_ADD:case_1.A[3]
+A[3] => DCR_A:case_2.A[3]
+A[3] => mux:mux_4.inputs[1]
+B[0] => interconnect_1[3].IN1
+B[0] => BCD_ADD:case_1.B[0]
+B[0] => DCR_A:case_2.B[0]
+B[0] => mux:mux_1.control_signals[1]
+B[0] => mux:mux_2.control_signals[1]
+B[0] => mux:mux_3.control_signals[1]
+B[0] => mux:mux_4.control_signals[1]
+B[0] => mux:mux_5.control_signals[1]
+B[0] => mux:mux_6.control_signals[1]
+B[1] => interconnect_2[3].IN1
+B[1] => BCD_ADD:case_1.B[1]
+B[1] => DCR_A:case_2.B[1]
+B[1] => mux:mux_1.control_signals[2]
+B[1] => mux:mux_2.control_signals[2]
+B[1] => mux:mux_3.control_signals[2]
+B[1] => mux:mux_4.control_signals[2]
+B[1] => mux:mux_5.control_signals[2]
+B[1] => mux:mux_6.control_signals[2]
+B[2] => interconnect_3[3].IN1
+B[2] => BCD_ADD:case_1.B[2]
+B[2] => DCR_A:case_2.B[2]
+B[3] => interconnect_4[3].IN1
+B[3] => BCD_ADD:case_1.B[3]
+B[3] => DCR_A:case_2.B[3]
+Y[0] <= mux:mux_1.output
+Y[1] <= mux:mux_2.output
+Y[2] <= mux:mux_3.output
+Y[3] <= mux:mux_4.output
+Y[4] <= mux:mux_5.output
+Y[5] <= mux:mux_6.output
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1
+A[0] => decimal_adjust:DA_1.inputs[0]
+A[1] => decimal_adjust:DA_1.inputs[1]
+A[2] => decimal_adjust:DA_1.inputs[2]
+A[3] => decimal_adjust:DA_1.inputs[3]
+B[0] => ~NO_FANOUT~
+B[1] => ~NO_FANOUT~
+B[2] => ripple_carry_adder:FA.input_2[0]
+B[3] => ripple_carry_adder:FA.input_2[1]
+outputs[0] <= decimal_adjust:DA_2.outputs[0]
+outputs[1] <= decimal_adjust:DA_2.outputs[1]
+outputs[2] <= decimal_adjust:DA_2.outputs[2]
+outputs[3] <= decimal_adjust:DA_2.outputs[3]
+outputs[4] <= outputs.DB_MAX_OUTPUT_PORT_TYPE
+outputs[5] <= <GND>
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1
+inputs[0] => BCD_check:BCD.inputs[1]
+inputs[0] => ripple_carry_adder:F1.input_1[0]
+inputs[0] => mux_2_bit:MUX_GEN:0:MUX.B
+inputs[1] => BCD_check:BCD.inputs[2]
+inputs[1] => ripple_carry_adder:F1.input_1[1]
+inputs[1] => mux_2_bit:MUX_GEN:1:MUX.B
+inputs[2] => BCD_check:BCD.inputs[3]
+inputs[2] => ripple_carry_adder:F1.input_1[2]
+inputs[2] => mux_2_bit:MUX_GEN:2:MUX.B
+inputs[3] => BCD_check:BCD.inputs[4]
+inputs[3] => ripple_carry_adder:F1.input_1[3]
+inputs[3] => mux_2_bit:MUX_GEN:3:MUX.B
+carry_in => mux_control.IN1
+carry_in => internal_carry_2.IN1
+carry_in => mux_2_bit:MUX_last.B
+outputs[0] <= mux_2_bit:MUX_GEN:0:MUX.output
+outputs[1] <= mux_2_bit:MUX_GEN:1:MUX.output
+outputs[2] <= mux_2_bit:MUX_GEN:2:MUX.output
+outputs[3] <= mux_2_bit:MUX_GEN:3:MUX.output
+carry_out <= mux_2_bit:MUX_last.output
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|BCD_check:BCD
+inputs[1] => ~NO_FANOUT~
+inputs[2] => output.IN0
+inputs[3] => output.IN1
+inputs[4] => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1
+input_1[0] => Full_Adder:G_1:0:FA.A
+input_1[1] => Full_Adder:G_1:1:FA.A
+input_1[2] => Full_Adder:G_1:2:FA.A
+input_1[3] => Full_Adder:G_1:3:FA.A
+input_2[0] => Full_Adder:G_1:0:FA.B
+input_2[1] => Full_Adder:G_1:1:FA.B
+input_2[2] => Full_Adder:G_1:2:FA.B
+input_2[3] => Full_Adder:G_1:3:FA.B
+input_carry => Full_Adder:G_1:0:FA.Cin
+output_sum[0] <= Full_Adder:G_1:0:FA.S
+output_sum[1] <= Full_Adder:G_1:1:FA.S
+output_sum[2] <= Full_Adder:G_1:2:FA.S
+output_sum[3] <= Full_Adder:G_1:3:FA.S
+output_carry <= Full_Adder:G_1:3:FA.Cout
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:0:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:0:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:0:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:0:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:0:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:1:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:1:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:1:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:1:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:1:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:2:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:2:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:2:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:2:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:2:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:3:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:3:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:3:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:3:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|ripple_carry_adder:F1|Full_Adder:\G_1:3:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|mux_2_bit:MUX_last
+A => output.IN0
+B => output.IN1
+B => output.IN0
+control => output.IN1
+control => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|mux_2_bit:\MUX_GEN:0:MUX
+A => output.IN0
+B => output.IN1
+B => output.IN0
+control => output.IN1
+control => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|mux_2_bit:\MUX_GEN:1:MUX
+A => output.IN0
+B => output.IN1
+B => output.IN0
+control => output.IN1
+control => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|mux_2_bit:\MUX_GEN:2:MUX
+A => output.IN0
+B => output.IN1
+B => output.IN0
+control => output.IN1
+control => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_1|mux_2_bit:\MUX_GEN:3:MUX
+A => output.IN0
+B => output.IN1
+B => output.IN0
+control => output.IN1
+control => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA
+input_1[0] => Full_Adder:G_1:0:FA.A
+input_1[1] => Full_Adder:G_1:1:FA.A
+input_1[2] => Full_Adder:G_1:2:FA.A
+input_1[3] => Full_Adder:G_1:3:FA.A
+input_2[0] => Full_Adder:G_1:0:FA.B
+input_2[1] => Full_Adder:G_1:1:FA.B
+input_2[2] => Full_Adder:G_1:2:FA.B
+input_2[3] => Full_Adder:G_1:3:FA.B
+input_carry => Full_Adder:G_1:0:FA.Cin
+output_sum[0] <= Full_Adder:G_1:0:FA.S
+output_sum[1] <= Full_Adder:G_1:1:FA.S
+output_sum[2] <= Full_Adder:G_1:2:FA.S
+output_sum[3] <= Full_Adder:G_1:3:FA.S
+output_carry <= Full_Adder:G_1:3:FA.Cout
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:0:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:0:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:0:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:0:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:0:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:1:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:1:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:1:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:1:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:1:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:2:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:2:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:2:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:2:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:2:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:3:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:3:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:3:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:3:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|ripple_carry_adder:FA|Full_Adder:\G_1:3:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2
+inputs[0] => BCD_check:BCD.inputs[1]
+inputs[0] => ripple_carry_adder:F1.input_1[0]
+inputs[0] => mux_2_bit:MUX_GEN:0:MUX.B
+inputs[1] => BCD_check:BCD.inputs[2]
+inputs[1] => ripple_carry_adder:F1.input_1[1]
+inputs[1] => mux_2_bit:MUX_GEN:1:MUX.B
+inputs[2] => BCD_check:BCD.inputs[3]
+inputs[2] => ripple_carry_adder:F1.input_1[2]
+inputs[2] => mux_2_bit:MUX_GEN:2:MUX.B
+inputs[3] => BCD_check:BCD.inputs[4]
+inputs[3] => ripple_carry_adder:F1.input_1[3]
+inputs[3] => mux_2_bit:MUX_GEN:3:MUX.B
+carry_in => mux_control.IN1
+carry_in => internal_carry_2.IN1
+carry_in => mux_2_bit:MUX_last.B
+outputs[0] <= mux_2_bit:MUX_GEN:0:MUX.output
+outputs[1] <= mux_2_bit:MUX_GEN:1:MUX.output
+outputs[2] <= mux_2_bit:MUX_GEN:2:MUX.output
+outputs[3] <= mux_2_bit:MUX_GEN:3:MUX.output
+carry_out <= mux_2_bit:MUX_last.output
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|BCD_check:BCD
+inputs[1] => ~NO_FANOUT~
+inputs[2] => output.IN0
+inputs[3] => output.IN1
+inputs[4] => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1
+input_1[0] => Full_Adder:G_1:0:FA.A
+input_1[1] => Full_Adder:G_1:1:FA.A
+input_1[2] => Full_Adder:G_1:2:FA.A
+input_1[3] => Full_Adder:G_1:3:FA.A
+input_2[0] => Full_Adder:G_1:0:FA.B
+input_2[1] => Full_Adder:G_1:1:FA.B
+input_2[2] => Full_Adder:G_1:2:FA.B
+input_2[3] => Full_Adder:G_1:3:FA.B
+input_carry => Full_Adder:G_1:0:FA.Cin
+output_sum[0] <= Full_Adder:G_1:0:FA.S
+output_sum[1] <= Full_Adder:G_1:1:FA.S
+output_sum[2] <= Full_Adder:G_1:2:FA.S
+output_sum[3] <= Full_Adder:G_1:3:FA.S
+output_carry <= Full_Adder:G_1:3:FA.Cout
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:0:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:0:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:0:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:0:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:0:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:1:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:1:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:1:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:1:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:1:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:2:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:2:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:2:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:2:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:2:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:3:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:3:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:3:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:3:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|ripple_carry_adder:F1|Full_Adder:\G_1:3:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|mux_2_bit:MUX_last
+A => output.IN0
+B => output.IN1
+B => output.IN0
+control => output.IN1
+control => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|mux_2_bit:\MUX_GEN:0:MUX
+A => output.IN0
+B => output.IN1
+B => output.IN0
+control => output.IN1
+control => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|mux_2_bit:\MUX_GEN:1:MUX
+A => output.IN0
+B => output.IN1
+B => output.IN0
+control => output.IN1
+control => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|mux_2_bit:\MUX_GEN:2:MUX
+A => output.IN0
+B => output.IN1
+B => output.IN0
+control => output.IN1
+control => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|BCD_ADD:case_1|decimal_adjust:DA_2|mux_2_bit:\MUX_GEN:3:MUX
+A => output.IN0
+B => output.IN1
+B => output.IN0
+control => output.IN1
+control => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2
+A[0] => ripple_carry_adder:FA.input_1[0]
+A[1] => ripple_carry_adder:FA.input_1[1]
+A[2] => ripple_carry_adder:FA.input_1[2]
+A[3] => ripple_carry_adder:FA.input_1[3]
+B[0] => ~NO_FANOUT~
+B[1] => ~NO_FANOUT~
+B[2] => ~NO_FANOUT~
+B[3] => ~NO_FANOUT~
+outputs[0] <= ripple_carry_adder:FA.output_sum[0]
+outputs[1] <= ripple_carry_adder:FA.output_sum[1]
+outputs[2] <= ripple_carry_adder:FA.output_sum[2]
+outputs[3] <= ripple_carry_adder:FA.output_sum[3]
+outputs[4] <= <GND>
+outputs[5] <= <GND>
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA
+input_1[0] => Full_Adder:G_1:0:FA.A
+input_1[1] => Full_Adder:G_1:1:FA.A
+input_1[2] => Full_Adder:G_1:2:FA.A
+input_1[3] => Full_Adder:G_1:3:FA.A
+input_2[0] => Full_Adder:G_1:0:FA.B
+input_2[1] => Full_Adder:G_1:1:FA.B
+input_2[2] => Full_Adder:G_1:2:FA.B
+input_2[3] => Full_Adder:G_1:3:FA.B
+input_carry => Full_Adder:G_1:0:FA.Cin
+output_sum[0] <= Full_Adder:G_1:0:FA.S
+output_sum[1] <= Full_Adder:G_1:1:FA.S
+output_sum[2] <= Full_Adder:G_1:2:FA.S
+output_sum[3] <= Full_Adder:G_1:3:FA.S
+output_carry <= Full_Adder:G_1:3:FA.Cout
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:0:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:0:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:0:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:0:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:0:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:1:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:1:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:1:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:1:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:1:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:2:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:2:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:2:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:2:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:2:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:3:FA
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:3:FA|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:3:FA|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:3:FA|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|DCR_A:case_2|ripple_carry_adder:FA|Full_Adder:\G_1:3:FA|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|mux:mux_1
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+inputs[1] => interconnect[1].IN1
+inputs[2] => interconnect[2].IN1
+inputs[3] => interconnect[3].IN1
+inputs[4] => interconnect[4].IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|mux:mux_2
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+inputs[1] => interconnect[1].IN1
+inputs[2] => interconnect[2].IN1
+inputs[3] => interconnect[3].IN1
+inputs[4] => interconnect[4].IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|mux:mux_3
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+inputs[1] => interconnect[1].IN1
+inputs[2] => interconnect[2].IN1
+inputs[3] => interconnect[3].IN1
+inputs[4] => interconnect[4].IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|mux:mux_4
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+inputs[1] => interconnect[1].IN1
+inputs[2] => interconnect[2].IN1
+inputs[3] => interconnect[3].IN1
+inputs[4] => interconnect[4].IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|mux:mux_5
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+inputs[1] => interconnect[1].IN1
+inputs[2] => interconnect[2].IN1
+inputs[3] => interconnect[3].IN1
+inputs[4] => interconnect[4].IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|toplevel:add_instance|mux:mux_6
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[1] => interconnect.IN0
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+control_signals[2] => interconnect.IN1
+inputs[1] => interconnect[1].IN1
+inputs[2] => interconnect[2].IN1
+inputs[3] => interconnect[3].IN1
+inputs[4] => interconnect[4].IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

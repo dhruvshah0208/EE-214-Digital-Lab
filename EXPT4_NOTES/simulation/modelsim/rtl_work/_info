@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT4_NOTES/simulation/modelsim
+Etonegenerator2
+Z1 w1616582874
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT4_NOTES/code/toneGenerator2.vhd
+Z5 F/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT4_NOTES/code/toneGenerator2.vhd
+l0
+L9
+V[FHMBzV:EgGjIY]^Xj55B3
+!s100 IL>ZcI@go<5VMOVI9VDgJ1
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1616585461
+!i10b 1
+Z8 !s108 1616585461.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT4_NOTES/code/toneGenerator2.vhd|
+Z10 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT4_NOTES/code/toneGenerator2.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+DEx4 work 14 tonegenerator2 0 22 [FHMBzV:EgGjIY]^Xj55B3
+l22
+L19
+VcHGT5N]eN2zc_<f03@@bm0
+!s100 dm:=V0X_aYjg<BU>YQRXL3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etonegenerator_tb
+Z13 w1616583249
+R2
+R3
+R0
+Z14 8/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT4_NOTES/toneGenerator_tb.vhd
+Z15 F/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT4_NOTES/toneGenerator_tb.vhd
+l0
+L4
+Vj33A^ihdm2;A4=^RiW=5S3
+!s100 DgO;acdSBfe6be1DM=5950
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT4_NOTES/toneGenerator_tb.vhd|
+Z17 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT4_NOTES/toneGenerator_tb.vhd|
+!i113 1
+R11
+R12
+Abhv
+R2
+R3
+DEx4 work 16 tonegenerator_tb 0 22 j33A^ihdm2;A4=^RiW=5S3
+l19
+L7
+VDZ4Q0I=Eam1iEKEXR_zPm3
+!s100 PkTe>`hczH4iQR:Iok<Qf3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12

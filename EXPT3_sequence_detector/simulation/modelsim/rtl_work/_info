@@ -1,0 +1,226 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/simulation/modelsim
+Ecombinational_circuit
+Z1 w1615914708
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/combinational_circuit.vhd
+Z5 F/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/combinational_circuit.vhd
+l0
+L5
+VZO4:0Cg3bUdWAF;3Wo:_Q0
+!s100 :XHz:TkP<:@1W`ko@4B:B0
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1615916416
+!i10b 1
+Z8 !s108 1615916415.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/combinational_circuit.vhd|
+Z10 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/combinational_circuit.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+DEx4 work 21 combinational_circuit 0 22 ZO4:0Cg3bUdWAF;3Wo:_Q0
+l14
+L13
+Vg:=<cb=EOXT;KLcn1WOnW2
+!s100 EjKH=Ae;7HVkz<Glzf:Pz3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Pd_ff
+R2
+R3
+Z13 w1615912543
+R0
+Z14 8/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/D_FF.vhd
+Z15 F/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/D_FF.vhd
+l0
+L4
+VP?K`]jkYXzhY=dGfDEQ9H0
+!s100 n40=hJNI[WZJ;K0;ATEOP0
+R6
+31
+Z16 !s110 1615916415
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/D_FF.vhd|
+Z18 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/D_FF.vhd|
+!i113 1
+R11
+R12
+Edflipflop
+R13
+R2
+R3
+R0
+R14
+R15
+l0
+L17
+VXm^:6eID>ni=X[SUo3`2a1
+!s100 LaUnYVhcXffRHL^NbaO`P2
+R6
+31
+R16
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Astruct
+R2
+R3
+DEx4 work 9 dflipflop 0 22 Xm^:6eID>ni=X[SUo3`2a1
+l23
+L22
+VaFh6E^[gP02V?V>CZjkg72
+!s100 Nn1NgB0>i<Vg8h4<;fSeh0
+R6
+31
+R16
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Edut
+Z19 w1615916324
+R2
+R3
+R0
+Z20 8/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/DUT.vhdl
+Z21 F/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/DUT.vhdl
+l0
+L8
+V8KEcIFSggC5`DUo<ln]?12
+!s100 6l5CLISk03ok3XVWUeL[]0
+R6
+31
+R16
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/DUT.vhdl|
+Z23 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 8KEcIFSggC5`DUo<ln]?12
+l23
+L13
+Vo6Y<eUKLhP^<cjb[]0MDJ0
+!s100 aGW2>XAk617MGeSbI]WK_0
+R6
+31
+R16
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Etestbench
+Z24 w1615916186
+R3
+R2
+R0
+Z25 8/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Testbench.vhdl
+Z26 F/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Testbench.vhdl
+l0
+L7
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+Z27 !s108 1615916416.000000
+Z28 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Testbench.vhdl|
+Z29 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+l69
+L9
+VB80FgJ@V=]AP]AVzb8Ko61
+!s100 LISbkk5z_^SzXoZcXClmi0
+R6
+31
+R7
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R11
+R12
+Etop_level
+Z30 w1615915883
+R2
+R3
+R0
+Z31 8/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/top_level.vhd
+Z32 F/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/top_level.vhd
+l0
+L5
+VB_zVI97om`EIGz?C6XKU[3
+!s100 V0HVRTk98n^>iQFmjLQ6E3
+R6
+31
+R7
+!i10b 1
+R27
+Z33 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/top_level.vhd|
+Z34 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT3_sequence_detector/Code/top_level.vhd|
+!i113 1
+R11
+R12
+Astruct
+R2
+R3
+DEx4 work 9 top_level 0 22 B_zVI97om`EIGz?C6XKU[3
+l26
+L12
+VdkQomNo8:`jm0:OB:i6eF0
+!s100 >^gB_cd[WAH6B5]B8zP>22
+R6
+31
+R7
+!i10b 1
+R27
+R33
+R34
+!i113 1
+R11
+R12

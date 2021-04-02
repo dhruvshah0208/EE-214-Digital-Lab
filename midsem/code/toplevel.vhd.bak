@@ -1,0 +1,36 @@
+-- A DUT entity is used to wrap your design.
+--  This example shows how you can do this for the
+--  Full-adder.
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity toplevel is
+   port(
+		A : in std_logic_vector(3 downto 0);
+		B : in std_logic_vector(3 downto 0); 
+		Y : out std_logic_vector(5 downto 0)
+		);
+end entity;
+
+architecture struct of toplevel is
+component BCD_ADD is -- Inputs will be all 8 bits
+   port(
+		A: in std_logic_vector(3 downto 0);
+		B :in std_logic_vector(3 downto 0); 
+		outputs: out std_logic_vector(5 downto 0)
+		);
+end component;
+
+signal I0:std_logic_vector(5 downto 0);
+signal I1:std_logic_vector(5 downto 0);
+signal I2:std_logic_vector(5 downto 0);
+signal I3:std_logic_vector(5 downto 0);
+
+begin
+	FA: ripple_carry_adder
+      port map (input_1 => A, input_2 => "1111", input_carry => '0', output_sum => outputs(3 downto 0),output_carry => carry_out_RCA);
+	outputs(5 downto 4) <= "00";
+	
+end struct;
+

@@ -1,0 +1,11 @@
+Fitter Status : Successful - Wed Mar 31 17:03:43 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : EXPT5_Music
+Top-level Entity Name : music
+Family : MAX V
+Device : 5M1270ZT144C5
+Timing Models : Final
+Total logic elements : 131 / 1,270 ( 10 % )
+Total pins : 11 / 114 ( 10 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

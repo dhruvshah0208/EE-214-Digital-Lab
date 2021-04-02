@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/student/Documents/EE_214/EE_214_Digital_Lab/FSM_design/simulation/modelsim
+Esequence_generator
+Z1 w1617308196
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/student/Documents/EE_214/EE_214_Digital_Lab/FSM_design/code/sequence_generator.vhd
+Z5 F/home/student/Documents/EE_214/EE_214_Digital_Lab/FSM_design/code/sequence_generator.vhd
+l0
+L6
+V^64OHDG5eVkF[H5a71Y6X0
+!s100 hC`iobMAGQf_Fa3geA@@h2
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1617308454
+!i10b 1
+Z8 !s108 1617308454.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/FSM_design/code/sequence_generator.vhd|
+Z10 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/FSM_design/code/sequence_generator.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Artlbehavioural
+R2
+R3
+DEx4 work 18 sequence_generator 0 22 ^64OHDG5eVkF[H5a71Y6X0
+l22
+L13
+VRJWAb1>[P@<The`OLG0R71
+!s100 <3_Eg48liQ3=>loT76?i73
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Esequence_generator_test_bench
+Z13 w1617308296
+R2
+R3
+R0
+Z14 8/home/student/Documents/EE_214/EE_214_Digital_Lab/FSM_design/code/sequence_generator_test_bench.vhd
+Z15 F/home/student/Documents/EE_214/EE_214_Digital_Lab/FSM_design/code/sequence_generator_test_bench.vhd
+l0
+L4
+Ve`eSSWeg_Q1]G@iDRgO:d3
+!s100 MWDWV:l=52jaB@XS3eGAD1
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/FSM_design/code/sequence_generator_test_bench.vhd|
+Z17 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/FSM_design/code/sequence_generator_test_bench.vhd|
+!i113 1
+R11
+R12
+Abehave
+R2
+R3
+DEx4 work 29 sequence_generator_test_bench 0 22 e`eSSWeg_Q1]G@iDRgO:d3
+l19
+L7
+VV?l3T23<R5HScLNgF5BWm3
+!s100 OHNffXS=IOOhZdc1_BQee2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12

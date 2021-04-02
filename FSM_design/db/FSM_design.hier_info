@@ -1,0 +1,45 @@
+|sequence_generator
+clk => sequence_register[0].CLK
+clk => sequence_register[1].CLK
+clk => sequence_register[2].CLK
+clk => sequence_register[3].CLK
+clk => fsm_state.CLK
+reset => sequence_register.OUTPUTSELECT
+reset => sequence_register.OUTPUTSELECT
+reset => sequence_register.OUTPUTSELECT
+reset => sequence_register.OUTPUTSELECT
+reset => fsm_state.DATAIN
+value[0] << sequence_register[0].DB_MAX_OUTPUT_PORT_TYPE
+value[1] << sequence_register[1].DB_MAX_OUTPUT_PORT_TYPE
+value[2] << sequence_register[2].DB_MAX_OUTPUT_PORT_TYPE
+value[3] << sequence_register[3].DB_MAX_OUTPUT_PORT_TYPE
+value[4] << <GND>
+value[5] << <GND>
+value[6] << <GND>
+value[7] << <GND>
+value[8] << <GND>
+value[9] << <GND>
+value[10] << <GND>
+value[11] << <GND>
+value[12] << <GND>
+value[13] << <GND>
+value[14] << <GND>
+value[15] << <GND>
+value[16] << <GND>
+value[17] << <GND>
+value[18] << <GND>
+value[19] << <GND>
+value[20] << <GND>
+value[21] << <GND>
+value[22] << <GND>
+value[23] << <GND>
+value[24] << <GND>
+value[25] << <GND>
+value[26] << <GND>
+value[27] << <GND>
+value[28] << <GND>
+value[29] << <GND>
+value[30] << <GND>
+value[31] << <GND>
+
+

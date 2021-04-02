@@ -1,0 +1,49 @@
+-- A DUT entity is used to wrap your design.
+--  This example shows how you can do this for the
+--  Full-adder.
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity toneGenerator2 is
+port (toneOut : out std_logic; --this pin will give your notes output
+clk : in std_logic;
+LED : out std_logic_vector(7 downto 0);
+switch : in std_logic_vector(7 downto 0));
+end entity toneGenerator2;
+--...............Start the architecture here......................
+-------------------CODE
+-------------------CODE
+
+architecture behav of toneGenerator2 is
+
+variable count_sa1: integer := 0;
+
+variable count_re: integer := 0;
+
+variable count_ga: integer := 0;
+
+variable count_ma: integer := 0;
+
+variable count_pa: integer := 0;
+
+variable count_dha: integer := 0;
+
+variable count_ni: integer := 0;
+
+variable count_sa2: integer := 0;
+
+begin
+
+	if (count_sa1 = 104168) then--240Hz
+	count_sa1 := 1;
+	sa1 := not sa1;
+	else
+	count_sa1 := count_sa1 + 1;
+	end if;
+	toneOut <= sa1;
+	LED <= (0 => '1', others => '0');
+	
+						
+end behav;

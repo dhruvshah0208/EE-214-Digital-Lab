@@ -5,6 +5,9 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/scan_reg.vhdl}
+vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/scan_chain.vhdl}
+vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/scan_chain_files/TopLevel.vhdl}
 vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/DUT.vhdl}
 vcom -93 -work work {/home/student/Documents/EE_214/EE-214-Digital-Lab/Expt2/code/mu1.vhd}
 
