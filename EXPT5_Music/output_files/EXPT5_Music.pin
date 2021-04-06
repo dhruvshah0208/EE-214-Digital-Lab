@@ -64,7 +64,7 @@ CHIP  "EXPT5_Music"  ASSIGNED TO AN: 5M1270ZT144C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-GND*                         : 1         :        :                   :         : 1         :                
+toneOut                      : 1         : output : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 2         :        :                   :         : 1         :                
 GND*                         : 3         :        :                   :         : 1         :                
 GND*                         : 4         :        :                   :         : 1         :                
@@ -81,7 +81,7 @@ GND*                         : 14        :        :                   :         
 GND*                         : 15        :        :                   :         : 1         :                
 GND*                         : 16        :        :                   :         : 1         :                
 GNDINT                       : 17        : gnd    :                   :         :           :                
-clk_50                       : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 18        :        :                   :         : 1         :                
 VCCINT                       : 19        : power  :                   : 1.8V    :           :                
 GND*                         : 20        :        :                   :         : 1         :                
 GND*                         : 21        :        :                   :         : 1         :                
@@ -102,7 +102,7 @@ TCK                          : 35        : input  :                   :         
 TDO                          : 36        : output :                   :         : 1         :                
 GND*                         : 37        :        :                   :         : 4         :                
 GND*                         : 38        :        :                   :         : 4         :                
-LED[5]                       : 39        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 39        :        :                   :         : 4         :                
 GND*                         : 40        :        :                   :         : 4         :                
 GND*                         : 41        :        :                   :         : 4         :                
 GND*                         : 42        :        :                   :         : 4         :                
@@ -111,17 +111,17 @@ GND*                         : 44        :        :                   :         
 GND*                         : 45        :        :                   :         : 4         :                
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
 GNDIO                        : 47        : gnd    :                   :         :           :                
-GND*                         : 48        :        :                   :         : 4         :                
-LED[7]                       : 49        : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : 50        :        :                   :         : 4         :                
-GND*                         : 51        :        :                   :         : 4         :                
-GND*                         : 52        :        :                   :         : 4         :                
-GND*                         : 53        :        :                   :         : 4         :                
+resetn                       : 48        : input  : 3.3-V LVTTL       :         : 4         : Y              
+LED[7]                       : 49        : output : 3.3-V LVTTL       :         : 4         : Y              
+LED[6]                       : 50        : output : 3.3-V LVTTL       :         : 4         : Y              
+LED[5]                       : 51        : output : 3.3-V LVTTL       :         : 4         : Y              
+LED[4]                       : 52        : output : 3.3-V LVTTL       :         : 4         : Y              
+LED[3]                       : 53        : output : 3.3-V LVTTL       :         : 4         : Y              
 GNDINT                       : 54        : gnd    :                   :         :           :                
-GND*                         : 55        :        :                   :         : 4         :                
+LED[2]                       : 55        : output : 3.3-V LVTTL       :         : 4         : Y              
 VCCINT                       : 56        : power  :                   : 1.8V    :           :                
-GND*                         : 57        :        :                   :         : 4         :                
-GND*                         : 58        :        :                   :         : 4         :                
+LED[1]                       : 57        : output : 3.3-V LVTTL       :         : 4         : Y              
+LED[0]                       : 58        : output : 3.3-V LVTTL       :         : 4         : Y              
 GND*                         : 59        :        :                   :         : 4         :                
 GND*                         : 60        :        :                   :         : 4         :                
 GND*                         : 61        :        :                   :         : 4         :                
@@ -152,7 +152,7 @@ GND*                         : 85        :        :                   :         
 GND*                         : 86        :        :                   :         : 3         :                
 GND*                         : 87        :        :                   :         : 3         :                
 GND*                         : 88        :        :                   :         : 3         :                
-GND*                         : 89        :        :                   :         : 3         :                
+clk_50                       : 89        : input  : 3.3-V LVTTL       :         : 3         : Y              
 VCCINT                       : 90        : power  :                   : 1.8V    :           :                
 GND*                         : 91        :        :                   :         : 3         :                
 GNDINT                       : 92        : gnd    :                   :         :           :                
@@ -171,7 +171,7 @@ GND*                         : 104       :        :                   :         
 GND*                         : 105       :        :                   :         : 3         :                
 GND*                         : 106       :        :                   :         : 3         :                
 GND*                         : 107       :        :                   :         : 3         :                
-LED[4]                       : 108       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 108       :        :                   :         : 3         :                
 GND*                         : 109       :        :                   :         : 2         :                
 GND*                         : 110       :        :                   :         : 2         :                
 GND*                         : 111       :        :                   :         : 2         :                
@@ -182,21 +182,21 @@ GNDIO                        : 115       : gnd    :                   :         
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
 GND*                         : 117       :        :                   :         : 2         :                
 GND*                         : 118       :        :                   :         : 2         :                
-LED[2]                       : 119       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 119       :        :                   :         : 2         :                
 GND*                         : 120       :        :                   :         : 2         :                
 GND*                         : 121       :        :                   :         : 2         :                
 GND*                         : 122       :        :                   :         : 2         :                
 GND*                         : 123       :        :                   :         : 2         :                
 GND*                         : 124       :        :                   :         : 2         :                
-toneOut                      : 125       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 125       :        :                   :         : 2         :                
 VCCINT                       : 126       : power  :                   : 1.8V    :           :                
 GND*                         : 127       :        :                   :         : 2         :                
 GNDINT                       : 128       : gnd    :                   :         :           :                
 GND*                         : 129       :        :                   :         : 2         :                
-LED[3]                       : 130       : output : 3.3-V LVTTL       :         : 2         : N              
-LED[1]                       : 131       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 130       :        :                   :         : 2         :                
+GND*                         : 131       :        :                   :         : 2         :                
 GND*                         : 132       :        :                   :         : 2         :                
-resetn                       : 133       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 133       :        :                   :         : 2         :                
 GND*                         : 134       :        :                   :         : 2         :                
 GNDIO                        : 135       : gnd    :                   :         :           :                
 VCCIO2                       : 136       : power  :                   : 3.3V    : 2         :                
@@ -206,5 +206,5 @@ GND*                         : 139       :        :                   :         
 GND*                         : 140       :        :                   :         : 2         :                
 GND*                         : 141       :        :                   :         : 2         :                
 GND*                         : 142       :        :                   :         : 2         :                
-LED[0]                       : 143       : output : 3.3-V LVTTL       :         : 2         : N              
-LED[6]                       : 144       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 143       :        :                   :         : 2         :                
+GND*                         : 144       :        :                   :         : 2         :                

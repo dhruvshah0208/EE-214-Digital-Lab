@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/simulation/modelsim
 Emusic
-Z1 w1617190279
+Z1 w1617720126
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
@@ -17,26 +17,26 @@ Z4 8/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd
 Z5 F/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd
 l0
 L4
-V4Rgonb1A0E3_]ZbNc>i8U0
-!s100 cz88G:iOj8PYO@kC4]fL@0
+Vbaof=oXniM:j<i9ZWWJ=n3
+!s100 ACEF[X[]n0YfcZkITfG1K2
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1617190324
+Z7 !s110 1617720152
 !i10b 1
-Z8 !s108 1617190324.000000
+Z8 !s108 1617720152.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd|
 Z10 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd|
 !i113 1
 Z11 o-93 -work work
 Z12 tExplicit 1 CvgOpt 0
-Afsm
+Artlbehavioural
 R2
 R3
-DEx4 work 5 music 0 22 4Rgonb1A0E3_]ZbNc>i8U0
-l33
-L14
-V6?4H:OjBVRj]9mJ`Ki_B51
-!s100 VW`1Z574Ulac3aDYJcDWl0
+DEx4 work 5 music 0 22 baof=oXniM:j<i9ZWWJ=n3
+l35
+L13
+V=]<Vg;P>?2QOUUJ3IQcYY1
+!s100 zhf6DHCd=2Yd3zJ8fcN3U2
 R6
 31
 R7
@@ -87,7 +87,7 @@ R17
 R11
 R12
 Etonegenerator2
-Z18 w1616582874
+Z18 w1617719584
 R2
 R3
 R0
@@ -101,9 +101,9 @@ R6
 31
 R7
 !i10b 1
-R8
-Z21 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/toneGenerator2.vhd|
-Z22 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/toneGenerator2.vhd|
+Z21 !s108 1617720151.000000
+Z22 !s90 -reportprogress|300|-93|-work|work|/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/toneGenerator2.vhd|
+Z23 !s107 /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/toneGenerator2.vhd|
 !i113 1
 R11
 R12
@@ -113,15 +113,15 @@ R3
 DEx4 work 14 tonegenerator2 0 22 [FHMBzV:EgGjIY]^Xj55B3
 l22
 L19
-VcHGT5N]eN2zc_<f03@@bm0
-!s100 dm:=V0X_aYjg<BU>YQRXL3
+VK9a1^cXa10^jBc`<_i2J10
+!s100 4;3bN^IezQj474A<[jam40
 R6
 31
 R7
 !i10b 1
-R8
 R21
 R22
+R23
 !i113 1
 R11
 R12

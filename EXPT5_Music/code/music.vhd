@@ -3,23 +3,25 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 entity music is
 generic(
-	n:integer range 0 to 100 := 4);
+	n:integer range 0 to 100 := 16);
 port (toneOut : out std_logic;
 	clk_50, resetn : in std_logic;
 	LED : out std_logic_vector(7 downto 0));
 	
 end entity music;
 
+architecture RtlBehavioural of music is
 
-architecture fsm of music is
+type FsmState is (RST, RUN);
+
+-- RTL machine control FSM state.
+signal fsm_state: FsmState;
+-- RTL machine registers.
+signal index_register: integer range 0 to n-1;
 
 type note_sequence is array (0 to n-1) of std_logic_vector(7 downto 0);
-
-
---variable sequence_1 : note_sequence := (sa,sa,ga,ga,sa,sa,ga,ga,sa,sa,ga,ga,ma,ga,re,sa);
 signal note_code : std_logic_vector(7 downto 0);
-signal clock_music : std_logic := '0';
-signal index_current: integer range -1 to n:= -1; -- -1 indicates silent
+signal clock_music : std_logic := '1';
 
 component toneGenerator2 is
 port (
@@ -31,69 +33,84 @@ end component;
 
 
 begin
-   tone_generator: toneGenerator2
-			port map (
-					-- order of inputs {input_1,input_2,input_carry}					
-					clk => clk_50,
-					LED => LED,
-					switch => note_code,
-					toneOut  => toneOut 	
-					);
-					
-	process(clk_50,resetn,index_current)	
-	
-	variable ni1:std_logic_vector(7 downto 0) := "00000001";
-	variable sa:std_logic_vector(7 downto 0) := "00000010";
-	variable re:std_logic_vector(7 downto 0) := "00000100";
-	variable ga:std_logic_vector(7 downto 0) := "00001000";
-	variable ma:std_logic_vector(7 downto 0) := "00010000";
-	variable pa:std_logic_vector(7 downto 0) := "00100000";
-	variable dha:std_logic_vector(7 downto 0) := "01000000";
-	variable ni2:std_logic_vector(7 downto 0) := "10000000";
-
-	variable index_next: integer range -1 to n := -1; -- -1 indicates silent
-	variable timecounter : integer range 0 to 1E8 := 0;
-	
-	variable sequence_1 : note_sequence := (sa,sa,ga,ga); -- test sequence of 4 notes
+-- component instantiate
+	tone_generator: toneGenerator2
+	port map (			
+			clk => clk_50,
+			LED => LED,
+			switch => note_code,
+			toneOut  => toneOut 	
+			);
+			
+	process(clk_50, resetn,index_register,fsm_state,note_code,clock_music)
+		variable next_fsm_state_var: FsmState;
+		variable next_index_register_var: integer;
+		variable ni1:std_logic_vector(7 downto 0);
+		variable sa	:std_logic_vector(7 downto 0);
+		variable re	:std_logic_vector(7 downto 0);
+		variable ga	:std_logic_vector(7 downto 0);
+		variable ma	:std_logic_vector(7 downto 0);
+		variable pa	:std_logic_vector(7 downto 0);
+		variable dha:std_logic_vector(7 downto 0);
+		variable ni2:std_logic_vector(7 downto 0);
+		variable sequence : note_sequence; -- test sequence of 4 notes
+		variable note_code_var: std_logic_vector(7 downto 0);
+		variable timecounter : integer range 0 to 1E8 := 1;
+		variable clk_c : std_logic := '1';	
 
 	begin
-	
+
+		-- default values of next state and register values.
+		next_fsm_state_var := fsm_state;
+		next_index_register_var := index_register;
+		ni1 := "00000001";
+		sa  := "00000010";
+		re  := "00000100";
+		ga  := "00001000";
+		ma  := "00010000";
+		pa  := "00100000";
+		dha := "01000000";
+		ni2 := "10000000";
+		sequence := (ni1,sa,re,ma,pa,dha,pa,pa,ma,ga,re,ni1,sa,sa,sa,sa);
+
+		-- next value computation for state, registers.
+		case fsm_state is
+			when RST =>
+				next_fsm_state_var := RUN;
+				note_code_var := "00000000";
+				next_index_register_var := 0;
+			when RUN =>
+				if(index_register = n-1) then
+					next_index_register_var := 0;
+					note_code_var := sequence(index_register);
+				else
+					note_code_var := sequence(index_register);
+					next_index_register_var := index_register + 1;
+				end if;
+		end case;
+
+		-- output of the state machine.
+		note_code <= note_code_var;
+		
+		-- state and register updates.
+		-- generate4 hz clock
 		if (clk_50 = '1' and clk_50' event) then
-			if (resetn = '1') then
-				index_current <= -1;
-				timecounter := 0;
-			elsif (timecounter = 125E5) then--4Hz				
-				index_current <= index_next;
-				timecounter := 0;
-			else
-			timecounter := timecounter + 1;
+			if (resetn = '0') then
+				if timecounter = 125E5 then -- The cycles in which clk is 1 or 0
+					timecounter := 1;			-- When it reaches max count i.e. 25x10^6 (half a second) it will be 0 again 
+					clk_c := not clk_c;		-- this variable will toggle
+					fsm_state <= next_fsm_state_var;
+					index_register<= next_index_register_var;
+				else
+					timecounter := timecounter + 1;	-- Counter will be incremented till it reaches max count
+					
+				end if;
+			elsif resetn = '1' then
+				fsm_state <= RST;
+				timecounter := 1;
+				clk_c := '0';
 			end if;
 		end if;
-		
-		-- state task
-		case index_current is
-			WHEN -1 => -- SILENT
-				note_code <= "00000000";
-				index_next := 0;
-			WHEN 0 =>	
-				note_code <= sequence_1(0);
-				index_next := 1;
-			WHEN 1 =>	
-				note_code <= sequence_1(1);
-				index_next := 2;
-			WHEN 2 =>	
-				note_code <= sequence_1(2);
-				index_next := 3;
-			WHEN 3 =>	
-				note_code <= sequence_1(3);
-				index_next := 0;				
-			WHEN others =>
-				note_code <= "00000000";
-		END CASE ;
-	
---		generate 4Hz clock (0.25s time period) from 50MHz clock (clock_music)
-
+		clock_music <= clk_c;		
 		end process;
-	
-	-- instantiate the component of toneGenerator 
-end fsm;
+end RtlBehavioural;

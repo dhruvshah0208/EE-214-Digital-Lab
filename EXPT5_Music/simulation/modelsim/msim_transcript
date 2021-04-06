@@ -11,47 +11,47 @@
 # 
 # vcom -93 -work work {/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/toneGenerator2.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:04 on Mar 31,2021
+# Start time: 20:12:31 on Apr 06,2021
 # vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/toneGenerator2.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity toneGenerator2
 # -- Compiling architecture behav of toneGenerator2
-# End time: 17:02:04 on Mar 31,2021, Elapsed time: 0:00:00
+# End time: 20:12:32 on Apr 06,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:04 on Mar 31,2021
+# Start time: 20:12:32 on Apr 06,2021
 # vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity music
-# -- Compiling architecture fsm of music
-# End time: 17:02:04 on Mar 31,2021, Elapsed time: 0:00:00
+# -- Compiling architecture RtlBehavioural of music
+# End time: 20:12:32 on Apr 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {/home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/song_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:04 on Mar 31,2021
+# Start time: 20:12:32 on Apr 06,2021
 # vcom -reportprogress 300 -93 -work work /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/song_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity song_tb
 # -- Compiling architecture testbench of song_tb
-# End time: 17:02:04 on Mar 31,2021, Elapsed time: 0:00:00
+# End time: 20:12:32 on Apr 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  song_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" song_tb 
-# Start time: 17:02:04 on Mar 31,2021
+# Start time: 20:12:32 on Apr 06,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.song_tb(testbench)
-# Loading work.music(fsm)
+# Loading work.music(rtlbehavioural)
 # Loading work.tonegenerator2(behav)
 # 
 # add wave *
@@ -60,7 +60,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Break key hit
-# Simulation stop requested.
-# End time: 17:02:17 on Mar 31,2021, Elapsed time: 0:00:13
+# 
+# stdin: <EOF>
+# End time: 20:14:58 on Apr 06,2021, Elapsed time: 0:02:26
 # Errors: 0, Warnings: 0

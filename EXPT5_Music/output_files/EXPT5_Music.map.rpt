@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EXPT5_Music
-Wed Mar 31 17:03:41 2021
+Tue Apr  6 20:12:21 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,14 +13,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: Top-level Entity: |music
- 14. Port Connectivity Checks: "toneGenerator2:tone_generator"
- 15. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |music
+ 13. Port Connectivity Checks: "toneGenerator2:tone_generator"
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -46,12 +45,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Mar 31 17:03:41 2021       ;
+; Analysis & Synthesis Status ; Successful - Tue Apr  6 20:12:21 2021       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; EXPT5_Music                                 ;
 ; Top-level Entity Name       ; music                                       ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 144                                         ;
+; Total logic elements        ; 437                                         ;
 ; Total pins                  ; 11                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -160,33 +159,33 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Total logic elements                        ; 144    ;
-;     -- Combinational with no register       ; 69     ;
-;     -- Register only                        ; 26     ;
-;     -- Combinational with a register        ; 49     ;
+; Total logic elements                        ; 437    ;
+;     -- Combinational with no register       ; 250    ;
+;     -- Register only                        ; 94     ;
+;     -- Combinational with a register        ; 93     ;
 ;                                             ;        ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 22     ;
-;     -- 3 input functions                    ; 22     ;
-;     -- 2 input functions                    ; 69     ;
-;     -- 1 input functions                    ; 5      ;
+;     -- 4 input functions                    ; 68     ;
+;     -- 3 input functions                    ; 99     ;
+;     -- 2 input functions                    ; 168    ;
+;     -- 1 input functions                    ; 8      ;
 ;     -- 0 input functions                    ; 0      ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 80     ;
-;     -- arithmetic mode                      ; 64     ;
+;     -- normal mode                          ; 278    ;
+;     -- arithmetic mode                      ; 159    ;
 ;     -- qfbk mode                            ; 0      ;
 ;     -- register cascade mode                ; 0      ;
-;     -- synchronous clear/load mode          ; 27     ;
+;     -- synchronous clear/load mode          ; 1      ;
 ;     -- asynchronous clear/load mode         ; 0      ;
 ;                                             ;        ;
-; Total registers                             ; 75     ;
-; Total logic cells in carry chains           ; 67     ;
+; Total registers                             ; 187    ;
+; Total logic cells in carry chains           ; 167    ;
 ; I/O pins                                    ; 11     ;
 ; Maximum fan-out node                        ; clk_50 ;
-; Maximum fan-out                             ; 75     ;
-; Total fan-out                               ; 475    ;
-; Average fan-out                             ; 3.06   ;
+; Maximum fan-out                             ; 187    ;
+; Total fan-out                               ; 1354   ;
+; Average fan-out                             ; 3.02   ;
 +---------------------------------------------+--------+
 
 
@@ -195,46 +194,22 @@ refer to the applicable agreement for further details.
 +------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node         ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                  ; Entity Name    ; Library Name ;
 +------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------+----------------+--------------+
-; |music                             ; 144 (45)    ; 75           ; 0          ; 11   ; 0            ; 69 (15)      ; 26 (0)            ; 49 (30)          ; 67 (27)         ; 0 (0)      ; |music                               ; music          ; work         ;
-;    |toneGenerator2:tone_generator| ; 99 (99)     ; 45           ; 0          ; 0    ; 0            ; 54 (54)      ; 26 (26)           ; 19 (19)          ; 40 (40)         ; 0 (0)      ; |music|toneGenerator2:tone_generator ; toneGenerator2 ; work         ;
+; |music                             ; 437 (75)    ; 187          ; 0          ; 11   ; 0            ; 250 (43)     ; 94 (0)            ; 93 (32)          ; 167 (27)        ; 0 (0)      ; |music                               ; music          ; work         ;
+;    |toneGenerator2:tone_generator| ; 362 (362)   ; 155          ; 0          ; 0    ; 0            ; 207 (207)    ; 94 (94)           ; 61 (61)          ; 140 (140)       ; 0 (0)      ; |music|toneGenerator2:tone_generator ; toneGenerator2 ; work         ;
 +------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; index_next[1]                                      ; Mux1                ; yes                    ;
-; index_next[0]                                      ; Mux1                ; yes                    ;
-; Number of user-specified and inferred latches = 2  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+---------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                ;
-+------------------------------------------------+--------------------------------------------------+
-; Register name                                  ; Reason for Removal                               ;
-+------------------------------------------------+--------------------------------------------------+
-; toneGenerator2:tone_generator|sa1              ; Stuck at GND due to stuck port clock_enable      ;
-; toneGenerator2:tone_generator|count_sa1[0..19] ; Stuck at GND due to stuck port clock_enable      ;
-; toneGenerator2:tone_generator|sa2              ; Lost fanout                                      ;
-; toneGenerator2:tone_generator|count_sa2[0..19] ; Lost fanout                                      ;
-; toneGenerator2:tone_generator|ni               ; Lost fanout                                      ;
-; toneGenerator2:tone_generator|count_ni[0..19]  ; Lost fanout                                      ;
-; toneGenerator2:tone_generator|dha              ; Lost fanout                                      ;
-; toneGenerator2:tone_generator|count_dha[0..19] ; Lost fanout                                      ;
-; toneGenerator2:tone_generator|pa               ; Lost fanout                                      ;
-; toneGenerator2:tone_generator|count_pa[0..19]  ; Lost fanout                                      ;
-; toneGenerator2:tone_generator|ga               ; Lost fanout                                      ;
-; toneGenerator2:tone_generator|count_ga[0..19]  ; Lost fanout                                      ;
-; toneGenerator2:tone_generator|LED[0,4..7]      ; Merged with toneGenerator2:tone_generator|LED[2] ;
-; toneGenerator2:tone_generator|LED[2]           ; Stuck at GND due to stuck port data_in           ;
-; index_current[3]                               ; Merged with index_current[2]                     ;
-; Total Number of Removed Registers = 133        ;                                                  ;
-+------------------------------------------------+--------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++-----------------------------------------------+----------------------------------------+
+; Register name                                 ; Reason for Removal                     ;
++-----------------------------------------------+----------------------------------------+
+; toneGenerator2:tone_generator|LED[6]          ; Stuck at GND due to stuck port data_in ;
+; toneGenerator2:tone_generator|ni              ; Lost fanout                            ;
+; toneGenerator2:tone_generator|count_ni[0..19] ; Lost fanout                            ;
+; Total Number of Removed Registers = 22        ;                                        ;
++-----------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -242,12 +217,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 75    ;
-; Number of registers using Synchronous Clear  ; 27    ;
+; Total registers                              ; 187   ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 48    ;
+; Number of registers using Clock Enable       ; 151   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -257,22 +232,19 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; index_current[1]                       ; 5       ;
-; index_current[2]                       ; 7       ;
-; index_current[0]                       ; 3       ;
-; Total number of inverted registers = 3 ;         ;
+; timecounter[0]                         ; 3       ;
+; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |music|timecounter[8]                       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |music|toneGenerator2:tone_generator|LED[1] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |music|index_current[2]                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |music|timecounter[23]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |music|index_register[1]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -280,20 +252,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+-------+----------------------------------------------+
 ; Parameter Name ; Value ; Type                                         ;
 +----------------+-------+----------------------------------------------+
-; n              ; 4     ; Signed Integer                               ;
+; n              ; 16    ; Signed Integer                               ;
 +----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "toneGenerator2:tone_generator" ;
-+--------------+-------+----------+-------------------------+
-; Port         ; Type  ; Severity ; Details                 ;
-+--------------+-------+----------+-------------------------+
-; switch[7..4] ; Input ; Info     ; Stuck at GND            ;
-; switch[2]    ; Input ; Info     ; Stuck at GND            ;
-; switch[0]    ; Input ; Info     ; Stuck at GND            ;
-+--------------+-------+----------+-------------------------+
++-----------+-------+----------+----------------------------+
+; Port      ; Type  ; Severity ; Details                    ;
++-----------+-------+----------+----------------------------+
+; switch[7] ; Input ; Info     ; Stuck at GND               ;
++-----------+-------+----------+----------------------------+
 
 
 +-------------------------------+
@@ -302,7 +272,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Mar 31 17:03:25 2021
+    Info: Processing started: Tue Apr  6 20:12:10 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EXPT5_Music -c EXPT5_Music
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -310,38 +280,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file code/to
     Info (12022): Found design unit 1: toneGenerator2-behav File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/toneGenerator2.vhd Line: 19
     Info (12023): Found entity 1: toneGenerator2 File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/toneGenerator2.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file code/music.vhd
-    Info (12022): Found design unit 1: music-fsm File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 14
+    Info (12022): Found design unit 1: music-RtlBehavioural File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 13
     Info (12023): Found entity 1: music File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 4
 Info (12127): Elaborating entity "music" for the top level hierarchy
-Warning (10542): VHDL Variable Declaration warning at music.vhd(46): used initial value expression for variable "sa" because variable was never assigned a value File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 46
-Warning (10542): VHDL Variable Declaration warning at music.vhd(48): used initial value expression for variable "ga" because variable was never assigned a value File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 48
-Warning (10542): VHDL Variable Declaration warning at music.vhd(57): used initial value expression for variable "sequence_1" because variable was never assigned a value File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 57
-Warning (10631): VHDL Process Statement warning at music.vhd(43): inferring latch(es) for signal or variable "index_next", which holds its previous value in one or more paths through the process File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 43
-Info (10041): Inferred latch for "index_next[0]" at music.vhd(43) File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 43
-Info (10041): Inferred latch for "index_next[1]" at music.vhd(43) File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 43
-Info (10041): Inferred latch for "index_next[2]" at music.vhd(43) File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 43
-Info (10041): Inferred latch for "index_next[3]" at music.vhd(43) File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 43
-Info (12128): Elaborating entity "toneGenerator2" for hierarchy "toneGenerator2:tone_generator" File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 34
-Warning (13012): Latch index_next[1] has unsafe behavior File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 43
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal index_current[0] File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 61
-Warning (13012): Latch index_next[0] has unsafe behavior File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 43
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal index_current[0] File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 61
+Warning (10036): Verilog HDL or VHDL warning at music.vhd(24): object "clock_music" assigned a value but never read File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 24
+Warning (10036): Verilog HDL or VHDL warning at music.vhd(55): object "ni2" assigned a value but never read File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 55
+Info (12128): Elaborating entity "toneGenerator2" for hierarchy "toneGenerator2:tone_generator" File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 37
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED[0]" is stuck at GND File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 9
-    Warning (13410): Pin "LED[2]" is stuck at GND File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 9
-    Warning (13410): Pin "LED[4]" is stuck at GND File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 9
-    Warning (13410): Pin "LED[5]" is stuck at GND File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 9
     Warning (13410): Pin "LED[6]" is stuck at GND File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 9
-    Warning (13410): Pin "LED[7]" is stuck at GND File: /home/student/Documents/EE_214/EE_214_Digital_Lab/EXPT5_Music/code/music.vhd Line: 9
-Info (17049): 105 registers lost all their fanouts during netlist optimizations.
-Info (21057): Implemented 155 device resources after synthesis - the final resource count might be different
+Info (17049): 21 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 448 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 144 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 939 megabytes
-    Info: Processing ended: Wed Mar 31 17:03:41 2021
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:30
+    Info (21061): Implemented 437 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 941 megabytes
+    Info: Processing ended: Tue Apr  6 20:12:21 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:26
 
 

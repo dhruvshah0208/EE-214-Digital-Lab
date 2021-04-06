@@ -58,3 +58,14 @@ set_global_assignment -name EDA_TEST_BENCH_NAME song_tb.vhd -section_id eda_simu
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME dut_instance -section_id song_tb.vhd
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME song_tb -section_id song_tb.vhd
 set_global_assignment -name EDA_TEST_BENCH_FILE song_tb.vhd -section_id song_tb.vhd
+set_location_assignment PIN_89 -to clk_50
+set_location_assignment PIN_48 -to resetn
+set_location_assignment PIN_1 -to toneOut
+set_location_assignment PIN_49 -to LED[7]
+set_location_assignment PIN_50 -to LED[6]
+set_location_assignment PIN_51 -to LED[5]
+set_location_assignment PIN_52 -to LED[4]
+set_location_assignment PIN_53 -to LED[3]
+set_location_assignment PIN_55 -to LED[2]
+set_location_assignment PIN_57 -to LED[1]
+set_location_assignment PIN_58 -to LED[0]
