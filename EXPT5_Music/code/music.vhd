@@ -72,6 +72,8 @@ begin
 		dha := "01000000";
 		ni2 := "10000000";
 		sequence := (ni1,sa,re,ma,pa,dha,pa,pa,ma,ga,re,ni1,sa,sa,sa,sa);
+		--sequence := (sa,sa,ga,ga,sa,sa,ga,ga,ma,ga,re,sa,
+		--					ni1,ni1,re,re,ni,ni1,re,re,ga,re,sa,ni1);
 
 		-- next value computation for state, registers.
 		case fsm_state is
